@@ -672,3 +672,12 @@ may consider it more useful to permit linking proprietary applications with
 the library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.  But first, please read
 <https://www.gnu.org/licenses/why-not-lgpl.html>.
+
+This project incorporates or adapts code from:
+
+akaiutil: access to AKAI S900/S1000/S3000 filesystems
+Copyright (C) 2008–2025 by Klaus Michael Indlekofer
+Released under the GNU General Public License
+Email: m.indlekofer@gmx.de
+
+Brendan Spear (c) 2025 - This project extends that work into a Swift-based macOS GUI.

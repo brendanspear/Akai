@@ -3,15 +3,19 @@
 //  AkaiSConvert
 //
 //  Created by Brendan Spear on 5/12/25.
+//  Licensed under GNU General Public License v3.0
 //
+
 import Foundation
 
 struct LoadedSample {
-    let data: [Int16]
-    let sampleRate: UInt32
-    let channels: Int
-    let bitDepth: UInt8
+    var data: [Int16]
+    var sampleRate: UInt32
+    var channels: Int
+    var bitDepth: UInt8
     let filename: String
-    var duration: Double 
-}
 
+    var duration: Double {
+        return Double(data.count) / Double(sampleRate)
+    }
+}

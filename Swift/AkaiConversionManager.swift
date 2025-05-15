@@ -29,22 +29,31 @@ class AkaiConversionManager {
         }
 
         if settings.trimSilence {
-            processedSamples = AudioSilenceTrimmer.trimSilence(from: processedSamples, threshold: 500)
+            processedSamples = AudioSilenceTrimmer.trimSilence(samples: processedSamples, threshold: 500)
         }
 
         if settings.addSilence {
-            processedSamples = AudioSilenceTrimmer.appendSilence(to: processedSamples, milliseconds: settings.silenceDurationMs, sampleRate: Int(sampleRate))
+            processedSamples = AudioSilenceTrimmer.appendSilence(
+                to: processedSamples,
+                milliseconds: settings.silenceDurationMs,
+                sampleRate: UInt32(sampleRate)
+            )
         }
 
         if settings.autoFixCompatibility {
-            if !AkaiProcessor.checkCompatibility(samples: processedSamples, sampleRate: sampleRate, bitDepth: UInt8(bitDepth), sampler: sampler) {
+            if !AkaiProcessor.checkCompatibility(
+                samples: processedSamples,
+                sampleRate: sampleRate,
+                bitDepth: UInt8(bitDepth),
+                sampler: sampler
+            ) {
                 print("Auto-fix: adjusting sample rate or bit depth")
                 newSampleRate = min(sampleRate, sampler.maxSampleRate)
-                newBitDepth = Int(sampler.supportedBitDepths.first ?? UInt8(bitDepth))
+                newBitDepth = sampler.supportedBitDepths.first ?? bitDepth
             }
         }
 
-        return (processedSamples, newBitDepth, newSampleRate)
+        return (processedSamples, Int(newBitDepth), newSampleRate)
     }
 
     static func exportSample(
@@ -53,6 +62,13 @@ class AkaiConversionManager {
         originalFile: URL,
         sampleRate: UInt32
     ) -> URL? {
-        return OutputDiskWriter.writeWav(samples, sampleRate: sampleRate, channels: 1, to: directory, originalFilename: originalFile.lastPathComponent)
+        return OutputDiskWriter.writeWav(
+            samples: samples,
+            sampleRate: sampleRate,
+            bitDepth: 16,
+            channels: 1,
+            to: directory,
+            originalFilename: originalFile.lastPathComponent
+        )
     }
 }

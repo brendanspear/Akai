@@ -3,13 +3,14 @@
 //  AkaiSConvert
 //
 //  Created by Brendan Spear on 5/10/25.
+//  Licensed under GNU General Public License v3.0
 //
 
 import Foundation
 import AVFoundation
 
 class AudioConverter {
-    
+
     static func loadWavPCM16(from url: URL) -> (samples: [Int16], sampleRate: UInt32, channels: UInt8)? {
         guard let file = try? AVAudioFile(forReading: url),
               let format = AVAudioFormat(commonFormat: .pcmFormatInt16, sampleRate: file.fileFormat.sampleRate, channels: file.fileFormat.channelCount, interleaved: true) else {
@@ -38,7 +39,6 @@ class AudioConverter {
         let channelCount = Int(buffer.format.channelCount)
         var samples: [Int16] = []
 
-        // Interleaved data
         for frame in 0..<Int(buffer.frameLength) {
             for channel in 0..<channelCount {
                 samples.append(int16Data[channel][frame])
@@ -69,5 +69,31 @@ class AudioConverter {
             print("Failed to write WAV: \(error.localizedDescription)")
             return false
         }
+    }
+
+    static func downmixStereoToMono(_ input: [Int16]) -> [Int16] {
+        var mono = [Int16]()
+        var i = 0
+        while i + 1 < input.count {
+            let left = input[i]
+            let right = input[i + 1]
+            mono.append(Int16((Int(left) + Int(right)) / 2))
+            i += 2
+        }
+        return mono
+    }
+
+    static func resample(buffer: [Int16], fromRate: UInt32, toRate: UInt32) -> [Int16] {
+        guard fromRate != 0, fromRate != toRate else { return buffer }
+        let ratio = Double(toRate) / Double(fromRate)
+        let newCount = Int(Double(buffer.count) * ratio)
+        var newBuffer = [Int16](repeating: 0, count: newCount)
+        for i in 0..<newCount {
+            let index = Int(Double(i) / ratio)
+            if index < buffer.count {
+                newBuffer[i] = buffer[index]
+            }
+        }
+        return newBuffer
     }
 }

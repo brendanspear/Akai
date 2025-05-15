@@ -30,8 +30,7 @@ class CompatibilityAnalyzer {
 
         // Check duration
         let maxSeconds = sampler.maxSampleDurationSeconds
-        if sample.duration > maxSeconds {
-            issues.append("Sample is too long for \(sampler.rawValue). Max allowed: \(maxSeconds) seconds.")
+        if sample.duration > Double(maxSeconds) {            issues.append("Sample is too long for \(sampler.rawValue). Max allowed: \(maxSeconds) seconds.")
         }
 
         return issues
@@ -42,14 +41,14 @@ class CompatibilityAnalyzer {
 
         // Downmix to mono if needed
         if sampler.isMonoOnly && fixed.channels > 1 {
-            fixed.buffer = AudioConverter.downmixStereoToMono(fixed.buffer)
+            fixed.data = AudioConverter.downmixStereoToMono(fixed.data)
             fixed.channels = 1
         }
 
         // Resample if needed
         if fixed.sampleRate > sampler.maxSampleRate {
-            fixed.buffer = AudioConverter.resample(
-                buffer: fixed.buffer,
+            fixed.data = AudioConverter.resample(
+                buffer: fixed.data,
                 fromRate: fixed.sampleRate,
                 toRate: sampler.maxSampleRate
             )

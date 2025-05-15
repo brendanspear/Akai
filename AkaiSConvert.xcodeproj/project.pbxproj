@@ -136,6 +136,9 @@
 		C679CBB32DCDB26A001EA86B /* akaiutil_take.c in Sources */ = {isa = PBXBuildFile; fileRef = C679CBA62DCDB26A001EA86B /* akaiutil_take.c */; };
 		C679CBB42DCDB26A001EA86B /* akaiutil_tar.c in Sources */ = {isa = PBXBuildFile; fileRef = C679CBA82DCDB26A001EA86B /* akaiutil_tar.c */; };
 		C679CBB52DCDB26A001EA86B /* akaiutil_wav.c in Sources */ = {isa = PBXBuildFile; fileRef = C679CBAA2DCDB26A001EA86B /* akaiutil_wav.c */; };
+		C6C2169D2DD5A1F10021EABE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C6C2169C2DD5A1F10021EABE /* README.md */; };
+		C6C2169F2DD5A2F70021EABE /* NOTICE.me in Resources */ = {isa = PBXBuildFile; fileRef = C6C2169E2DD5A2EE0021EABE /* NOTICE.me */; };
+		C6C216A22DD5A3C10021EABE /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C6C216A12DD5A3C10021EABE /* LICENSE */; };
 		C6C8940A2DD2F00800F9C42F /* CompatibilityCheckResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C894092DD2F00300F9C42F /* CompatibilityCheckResult.swift */; };
 		C6C8940C2DD2F0FD00F9C42F /* LoadedSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C8940B2DD2F0F900F9C42F /* LoadedSample.swift */; };
 		C6C894102DD2F1A000F9C42F /* AudioExportFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C8940F2DD2F19C00F9C42F /* AudioExportFormat.swift */; };
@@ -144,6 +147,7 @@
 		C6CE0FF02DCDAB530028F722 /* AkaiProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CE0FEC2DCDAB530028F722 /* AkaiProcessor.swift */; };
 		C6CE0FF12DCDAB530028F722 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CE0FEE2DCDAB530028F722 /* ContentView.swift */; };
 		C6CE0FF32DCDAB530028F722 /* AkaiUtilGUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CE0FED2DCDAB530028F722 /* AkaiUtilGUIApp.swift */; };
+		C6DD189A2DD5B1C800738CC4 /* DummyBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = C6DD18992DD5B1C800738CC4 /* DummyBridge.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -359,6 +363,9 @@
 		C679CBAB2DCDB26A001EA86B /* commoninclude.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = commoninclude.h; sourceTree = "<group>"; };
 		C679CBAC2DCDB26A001EA86B /* commonlib.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = commonlib.c; sourceTree = "<group>"; };
 		C679CBAD2DCDB26A001EA86B /* fdrawcmd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fdrawcmd.h; sourceTree = "<group>"; };
+		C6C2169C2DD5A1F10021EABE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C6C2169E2DD5A2EE0021EABE /* NOTICE.me */ = {isa = PBXFileReference; lastKnownFileType = text; path = NOTICE.me; sourceTree = "<group>"; };
+		C6C216A12DD5A3C10021EABE /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		C6C894092DD2F00300F9C42F /* CompatibilityCheckResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompatibilityCheckResult.swift; sourceTree = "<group>"; };
 		C6C8940B2DD2F0F900F9C42F /* LoadedSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadedSample.swift; sourceTree = "<group>"; };
 		C6C8940F2DD2F19C00F9C42F /* AudioExportFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioExportFormat.swift; sourceTree = "<group>"; };
@@ -371,6 +378,7 @@
 		C6CE0FEC2DCDAB530028F722 /* AkaiProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AkaiProcessor.swift; sourceTree = "<group>"; };
 		C6CE0FED2DCDAB530028F722 /* AkaiUtilGUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AkaiUtilGUIApp.swift; sourceTree = "<group>"; };
 		C6CE0FEE2DCDAB530028F722 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C6DD18992DD5B1C800738CC4 /* DummyBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DummyBridge.m; sourceTree = "<group>"; };
 		C6E553C42DD1AE5000403630 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -588,6 +596,10 @@
 		C6CE0FA82DCDA7AD0028F722 = {
 			isa = PBXGroup;
 			children = (
+				C6DD18992DD5B1C800738CC4 /* DummyBridge.m */,
+				C6C216A12DD5A3C10021EABE /* LICENSE */,
+				C6C2169C2DD5A1F10021EABE /* README.md */,
+				C6C2169E2DD5A2EE0021EABE /* NOTICE.me */,
 				C6E553C42DD1AE5000403630 /* module.modulemap */,
 				C63ED1EA2DD1965400A72418 /* akai_constants.h */,
 				C679CB9E2DCDB26A001EA86B /* akaiutil.h */,
@@ -892,6 +904,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6C2169D2DD5A1F10021EABE /* README.md in Resources */,
+				C6C216A22DD5A3C10021EABE /* LICENSE in Resources */,
+				C6C2169F2DD5A2F70021EABE /* NOTICE.me in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -920,6 +935,7 @@
 				C679CBAE2DCDB26A001EA86B /* akaiutil_io.c in Sources */,
 				C63ED13C2DD0695700A72418 /* SilenceSettingsView.swift in Sources */,
 				C63ED1552DD06BAA00A72418 /* SamplerSettingsView.swift in Sources */,
+				C6DD189A2DD5B1C800738CC4 /* DummyBridge.m in Sources */,
 				C63ED0F92DD05D6300A72418 /* FileSettingsViewModel.swift in Sources */,
 				C679CBAF2DCDB26A001EA86B /* akaiutil_file.c in Sources */,
 				C63ED0972DD0416A00A72418 /* AkaiConversionManager.swift in Sources */,
