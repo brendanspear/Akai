@@ -1,0 +1,11 @@
+module AkaiUtil {
+    header "akaiutil.h"
+    header "akaiutil_io.h"
+    header "akaiutil_file.h"
+    header "akaiutil_take.h"
+    header "akaiutil_tar.h"
+    header "akaiutil_trim.h"
+    header "akaiutil_check.h"
+    header "akaiutil_wav.h"
+    export *
+}
