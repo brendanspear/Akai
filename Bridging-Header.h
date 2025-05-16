@@ -1,4 +1,5 @@
 // Bridging-Header.h
+#import <stdint.h>
 #import <stdio.h>
 #import "akaiutil.h"
 #include "akaiutil.h"

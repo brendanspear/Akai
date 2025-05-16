@@ -14,7 +14,7 @@ class AkaiConversionManager {
         for sampler: AkaiSampler,
         settings: ExportPreferences
     ) -> (convertedSamples: [Int16]?, bitDepth: Int, sampleRate: UInt32)? {
-        
+
         guard let (samples, sampleRate, bitDepth) = AudioConverter.loadWavPCM16(from: url) else {
             print("Failed to load WAV")
             return nil
@@ -44,7 +44,7 @@ class AkaiConversionManager {
             if !AkaiProcessor.checkCompatibility(
                 samples: processedSamples,
                 sampleRate: sampleRate,
-                bitDepth: UInt8(bitDepth),
+                bitDepth: bitDepth,
                 sampler: sampler
             ) {
                 print("Auto-fix: adjusting sample rate or bit depth")
@@ -53,8 +53,7 @@ class AkaiConversionManager {
             }
         }
 
-        return (processedSamples, Int(newBitDepth), newSampleRate)
-    }
+        return (processedSamples, Int(newBitDepth), newSampleRate)    }
 
     static func exportSample(
         samples: [Int16],

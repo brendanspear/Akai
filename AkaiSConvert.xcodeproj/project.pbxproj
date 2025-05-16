@@ -1231,11 +1231,11 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/**",
 					"/opt/homebrew/include/**",
 					"/opt/homebrew/opt/**",
 					"/opt/homebrew/opt/libsndfile/include/**",
 					"/opt/homebrew/opt/libsndfile/lib/**",
-					"$(SRCROOT)/**",
 				);
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1270,11 +1270,11 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/**",
 					"/opt/homebrew/include/**",
 					"/opt/homebrew/opt/**",
 					"/opt/homebrew/opt/libsndfile/include/**",
 					"/opt/homebrew/opt/libsndfile/lib/**",
-					"$(SRCROOT)/**",
 				);
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
