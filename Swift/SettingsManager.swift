@@ -9,7 +9,7 @@ import Foundation
 class SettingsManager: ObservableObject {
     static let shared = SettingsManager()
     
-    @Published var selectedSampler: AkaiSampler = .s1000
+    @Published var selectedSampler: SamplerType = .s1000
     @Published var normalizeAudio: Bool = false
     @Published var trimSilence: Bool = false
     @Published var addSilencePadding: Bool = false

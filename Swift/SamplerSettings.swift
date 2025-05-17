@@ -8,15 +8,15 @@
 import Foundation
 
 struct SamplerSettings {
-    var selectedSampler: AkaiSampler = .s1000
-    var targetSampleRate: UInt32 = SamplerDefaults.defaultSampleRate(for: .s1000)
-    var targetBitDepth: UInt8 = SamplerDefaults.defaultBitDepth(for: .s1000)
+    var selectedSampler: SamplerType = .s1000
+    var targetSampleRate: UInt32 = SamplerType.Defaults.defaultSampleRate(for: .s1000)
+    var targetBitDepth: UInt8 = SamplerType.Defaults.defaultBitDepth(for: .s1000)
     var forceMono: Bool = false
 
-    mutating func update(for sampler: AkaiSampler) {
+    mutating func update(for sampler: SamplerType) {
         selectedSampler = sampler
-        targetSampleRate = SamplerDefaults.defaultSampleRate(for: sampler)
-        targetBitDepth = SamplerDefaults.defaultBitDepth(for: sampler)
-        forceMono = SamplerDefaults.isMonoOnly(for: sampler)
+        targetSampleRate = SamplerType.Defaults.defaultSampleRate(for: sampler)
+        targetBitDepth = SamplerType.Defaults.defaultBitDepth(for: sampler)
+        forceMono = SamplerType.Defaults.isMonoOnly(for: sampler)
     }
 }

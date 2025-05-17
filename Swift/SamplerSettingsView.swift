@@ -2,42 +2,24 @@
 //  SamplerSettingsView.swift
 //  AkaiSConvert
 //
-//  Created by Brendan Spear on 5/11/25.
+//  Created by Brendan Spear on 2025-05-XX.
 //
 
 import SwiftUI
 
 struct SamplerSettingsView: View {
-    @Binding var selectedSampler: AkaiSampler
-    @Binding var forceMono: Bool
-    @Binding var targetSampleRate: UInt32
-    @Binding var targetBitDepth: UInt8
+    @ObservedObject var viewModel: SamplerSettingsViewModel
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            Text("Sampler Type")
-                .font(.headline)
-            Picker("Sampler", selection: $selectedSampler) {
-                ForEach(AkaiSampler.allCases, id: \.self) { sampler in
-                    Text(sampler.rawValue).tag(sampler)
+        Form {
+            Section(header: Text("Select Sampler")) {
+                Picker("Sampler", selection: $viewModel.sampler) {
+                    ForEach(SamplerType.allCases, id: \.self) { sampler in
+                        Text(sampler.rawValue.capitalized).tag(sampler)
+                    }
                 }
-            }
-            .pickerStyle(SegmentedPickerStyle())
-
-            Toggle("Force Mono Output", isOn: $forceMono)
-
-            HStack {
-                Text("Sample Rate:")
-                Spacer()
-                Text("\(targetSampleRate) Hz")
-            }
-
-            HStack {
-                Text("Bit Depth:")
-                Spacer()
-                Text("\(targetBitDepth)-bit")
+                .pickerStyle(SegmentedPickerStyle())
             }
         }
-        .padding()
     }
 }

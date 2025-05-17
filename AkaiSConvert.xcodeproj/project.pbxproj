@@ -7,147 +7,58 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C63ED08D2DD0347C00A72418 /* akaiutil_trim.c in Sources */ = {isa = PBXBuildFile; fileRef = C63ED08C2DD0347100A72418 /* akaiutil_trim.c */; };
-		C63ED08F2DD034C600A72418 /* akaiutil_check.c in Sources */ = {isa = PBXBuildFile; fileRef = C63ED08E2DD034BC00A72418 /* akaiutil_check.c */; };
-		C63ED0922DD0375100A72418 /* akaiutil_audioutils.c in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0912DD0374A00A72418 /* akaiutil_audioutils.c */; };
-		C63ED0972DD0416A00A72418 /* AkaiConversionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0962DD0416500A72418 /* AkaiConversionManager.swift */; };
-		C63ED0992DD041AA00A72418 /* SamplerSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0982DD041A500A72418 /* SamplerSettings.swift */; };
-		C63ED09B2DD041E100A72418 /* AudioCompatibilityChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED09A2DD041DD00A72418 /* AudioCompatibilityChecker.swift */; };
-		C63ED09D2DD0420B00A72418 /* AudioNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED09C2DD0420900A72418 /* AudioNormalizer.swift */; };
-		C63ED09F2DD0424A00A72418 /* SamplerCompatibilityChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED09E2DD0424700A72418 /* SamplerCompatibilityChecker.swift */; };
-		C63ED0A12DD042C900A72418 /* SilenceTrimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0A02DD042C700A72418 /* SilenceTrimmer.swift */; };
-		C63ED0A32DD042FC00A72418 /* SampleNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0A22DD042FA00A72418 /* SampleNormalizer.swift */; };
-		C63ED0A62DD0436000A72418 /* CompatibilityChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0A52DD0435E00A72418 /* CompatibilityChecker.swift */; };
-		C63ED0A82DD0438E00A72418 /* SamplerOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0A72DD0438C00A72418 /* SamplerOptions.swift */; };
-		C63ED0AA2DD043C800A72418 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0A92DD043C600A72418 /* AppState.swift */; };
-		C63ED0AC2DD043EE00A72418 /* ExportPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0AB2DD043EC00A72418 /* ExportPreferences.swift */; };
-		C63ED0AE2DD0441400A72418 /* SamplerTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0AD2DD0441200A72418 /* SamplerTarget.swift */; };
-		C63ED0B02DD0444900A72418 /* ConversionSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0AF2DD0444700A72418 /* ConversionSettings.swift */; };
-		C63ED0B22DD0447E00A72418 /* AudioUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0B12DD0447C00A72418 /* AudioUtils.swift */; };
-		C63ED0B42DD04C0000A72418 /* FormatChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0B32DD04BFD00A72418 /* FormatChecker.swift */; };
-		C63ED0B62DD04C2D00A72418 /* SamplerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0B52DD04C2B00A72418 /* SamplerModel.swift */; };
-		C63ED0B92DD04CF500A72418 /* AkaiSampler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0B82DD04CF200A72418 /* AkaiSampler.swift */; };
-		C63ED0BB2DD04D4600A72418 /* OutputDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0BA2DD04D4500A72418 /* OutputDestination.swift */; };
-		C63ED0BD2DD04E3600A72418 /* AudioProcessingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0BC2DD04E3400A72418 /* AudioProcessingOptions.swift */; };
-		C63ED0C22DD04F8400A72418 /* AudioSilenceTrimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0C12DD04F8100A72418 /* AudioSilenceTrimmer.swift */; };
-		C63ED0C42DD04FBF00A72418 /* AudioPreviewPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0C32DD04FBD00A72418 /* AudioPreviewPlayer.swift */; };
-		C63ED0C62DD04FFD00A72418 /* SampleConversionUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0C52DD04FFB00A72418 /* SampleConversionUtils.swift */; };
-		C63ED0C82DD0504000A72418 /* FileNamingUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0C72DD0503E00A72418 /* FileNamingUtils.swift */; };
-		C63ED0CC2DD050B200A72418 /* SilenceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0CB2DD050B000A72418 /* SilenceUtils.swift */; };
-		C63ED0CE2DD050FB00A72418 /* NormalizationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0CD2DD050F900A72418 /* NormalizationUtils.swift */; };
-		C63ED0D12DD0518900A72418 /* PreviewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0D02DD0518800A72418 /* PreviewUtils.swift */; };
-		C63ED0D32DD051B400A72418 /* WaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0D22DD051B200A72418 /* WaveformView.swift */; };
-		C63ED0D52DD051F600A72418 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0D42DD051F500A72418 /* AppSettings.swift */; };
-		C63ED0D92DD0563000A72418 /* WaveformAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0D82DD0562E00A72418 /* WaveformAnalyzer.swift */; };
-		C63ED0DB2DD0568600A72418 /* CompatibilityFixer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0DA2DD0568400A72418 /* CompatibilityFixer.swift */; };
-		C63ED0DE2DD0570400A72418 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0DD2DD0570000A72418 /* UserPreferences.swift */; };
-		C63ED0E12DD0578600A72418 /* AudioConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0E02DD0578500A72418 /* AudioConverter.swift */; };
-		C63ED0E32DD057B000A72418 /* SamplerCompatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0E22DD057AE00A72418 /* SamplerCompatibility.swift */; };
-		C63ED0EB2DD05AF600A72418 /* AudioValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0EA2DD05AF500A72418 /* AudioValidation.swift */; };
-		C63ED0ED2DD05B5300A72418 /* AudioUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0EC2DD05B4F00A72418 /* AudioUtility.swift */; };
-		C63ED0F02DD05C0000A72418 /* SamplerOutputOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0EF2DD05BF300A72418 /* SamplerOutputOption.swift */; };
-		C63ED0F22DD05C3D00A72418 /* SamplerSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0F12DD05C3B00A72418 /* SamplerSettingsViewModel.swift */; };
-		C63ED0F42DD05C8200A72418 /* OutputSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0F32DD05C8000A72418 /* OutputSettingsView.swift */; };
-		C63ED0F62DD05CD100A72418 /* ProcessingOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0F52DD05CCC00A72418 /* ProcessingOptionsView.swift */; };
-		C63ED0F92DD05D6300A72418 /* FileSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0F82DD05D6100A72418 /* FileSettingsViewModel.swift */; };
-		C63ED0FB2DD05DA500A72418 /* ProgressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0FA2DD05DA400A72418 /* ProgressViewModel.swift */; };
-		C63ED0FD2DD05DF000A72418 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0FC2DD05DEE00A72418 /* SettingsManager.swift */; };
-		C63ED0FF2DD05E2B00A72418 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED0FE2DD05E2800A72418 /* View+Extensions.swift */; };
-		C63ED1022DD05ECF00A72418 /* WaveformPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1012DD05ECE00A72418 /* WaveformPreview.swift */; };
-		C63ED1042DD05F2300A72418 /* AudioPlaybackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1032DD05F2200A72418 /* AudioPlaybackView.swift */; };
-		C63ED1062DD05FE100A72418 /* WavPreviewPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1052DD05FE000A72418 /* WavPreviewPlayer.swift */; };
-		C63ED1082DD0611900A72418 /* WavVisualizer..swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1072DD0611700A72418 /* WavVisualizer..swift */; };
-		C63ED10A2DD0614E00A72418 /* WavPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1092DD0614B00A72418 /* WavPlayer.swift */; };
-		C63ED10E2DD062B800A72418 /* OutputPathHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED10D2DD062B500A72418 /* OutputPathHelper.swift */; };
-		C63ED1102DD0630B00A72418 /* SamplerOutputTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED10F2DD0630900A72418 /* SamplerOutputTarget.swift */; };
-		C63ED1122DD0633600A72418 /* SoundPreviewPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1112DD0633400A72418 /* SoundPreviewPlayer.swift */; };
-		C63ED1142DD0636700A72418 /* SystemVolumeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1132DD0636600A72418 /* SystemVolumeManager.swift */; };
-		C63ED1162DD063EF00A72418 /* TrimOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1152DD063EC00A72418 /* TrimOptions.swift */; };
-		C63ED1182DD0642500A72418 /* AppPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1172DD0642400A72418 /* AppPreferences.swift */; };
-		C63ED11A2DD0645500A72418 /* SampleProcessingTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1192DD0645300A72418 /* SampleProcessingTask.swift */; };
-		C63ED11C2DD064B200A72418 /* SampleTaskQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED11B2DD064AF00A72418 /* SampleTaskQueue.swift */; };
-		C63ED11E2DD0650000A72418 /* TaskRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED11D2DD064FE00A72418 /* TaskRunner.swift */; };
-		C63ED1202DD065E700A72418 /* DragDropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED11F2DD065E500A72418 /* DragDropView.swift */; };
-		C63ED1222DD0663200A72418 /* DragDropController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1212DD0662F00A72418 /* DragDropController.swift */; };
-		C63ED1242DD0667D00A72418 /* OutputPathSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1232DD0667B00A72418 /* OutputPathSelector.swift */; };
-		C63ED1262DD066D500A72418 /* ProcessingProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1252DD066D200A72418 /* ProcessingProgress.swift */; };
-		C63ED1282DD0673800A72418 /* SamplingSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1272DD0672200A72418 /* SamplingSettings.swift */; };
-		C63ED12A2DD0677200A72418 /* SamplerSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1292DD0677000A72418 /* SamplerSelectionView.swift */; };
-		C63ED12C2DD067B200A72418 /* TrimOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED12B2DD067B000A72418 /* TrimOptionsView.swift */; };
-		C63ED12E2DD067E100A72418 /* MonoConversionToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED12D2DD067DF00A72418 /* MonoConversionToggle.swift */; };
-		C63ED1302DD0682900A72418 /* OutputFormatSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED12F2DD0682800A72418 /* OutputFormatSettingsView.swift */; };
-		C63ED1322DD0685F00A72418 /* ConversionBehaviorSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1312DD0685D00A72418 /* ConversionBehaviorSettingsView.swift */; };
-		C63ED1342DD0689E00A72418 /* CompatibilitySettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1332DD0689D00A72418 /* CompatibilitySettingsView.swift */; };
-		C63ED1362DD068C600A72418 /* NormalizationSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1352DD068C500A72418 /* NormalizationSettingsView.swift */; };
-		C63ED1382DD068F100A72418 /* PaddingSilenceSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1372DD068EF00A72418 /* PaddingSilenceSettingsView.swift */; };
-		C63ED13A2DD0692300A72418 /* NormalizeSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1392DD0692200A72418 /* NormalizeSettingsView.swift */; };
-		C63ED13C2DD0695700A72418 /* SilenceSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED13B2DD0695500A72418 /* SilenceSettingsView.swift */; };
-		C63ED13E2DD0698700A72418 /* VolumeNormalizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED13D2DD0698500A72418 /* VolumeNormalizationView.swift */; };
-		C63ED1402DD069B800A72418 /* SilencePaddingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED13F2DD069B500A72418 /* SilencePaddingView.swift */; };
-		C63ED1422DD069E200A72418 /* SampleRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1412DD069E100A72418 /* SampleRateView.swift */; };
-		C63ED1442DD06A0C00A72418 /* BitDepthPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1432DD06A0A00A72418 /* BitDepthPicker.swift */; };
-		C63ED1462DD06A3800A72418 /* FormatTargetOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1452DD06A3700A72418 /* FormatTargetOptions.swift */; };
-		C63ED1482DD06A5F00A72418 /* HelpToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1472DD06A5E00A72418 /* HelpToggleView.swift */; };
-		C63ED14A2DD06A8E00A72418 /* SamplerWarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1492DD06A8C00A72418 /* SamplerWarningView.swift */; };
-		C63ED14C2DD06AB500A72418 /* SampleInfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED14B2DD06AB400A72418 /* SampleInfoRow.swift */; };
-		C63ED14E2DD06AEB00A72418 /* FileDropZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED14D2DD06AE900A72418 /* FileDropZone.swift */; };
-		C63ED1502DD06B1600A72418 /* FileDropZone_Previews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED14F2DD06B1400A72418 /* FileDropZone_Previews.swift */; };
-		C63ED1522DD06B4000A72418 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1512DD06B3E00A72418 /* AppDelegate.swift */; };
-		C63ED1552DD06BAA00A72418 /* SamplerSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1542DD06BA800A72418 /* SamplerSettingsView.swift */; };
-		C63ED1572DD06BDA00A72418 /* CompatibilityCheckResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1562DD06BD700A72418 /* CompatibilityCheckResultView.swift */; };
-		C63ED1592DD06C0C00A72418 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1582DD06C0A00A72418 /* ProgressBar.swift */; };
-		C63ED15B2DD06C3F00A72418 /* FileListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED15A2DD06C3D00A72418 /* FileListRow.swift */; };
-		C63ED15D2DD06C6C00A72418 /* MonoConversionSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED15C2DD06C6A00A72418 /* MonoConversionSettings.swift */; };
-		C63ED15F2DD06CBB00A72418 /* PreviewPlayback.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED15E2DD06CB900A72418 /* PreviewPlayback.swift */; };
-		C63ED1622DD06D3900A72418 /* FileConversionTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1612DD06D3600A72418 /* FileConversionTask.swift */; };
-		C63ED1642DD06DA300A72418 /* SampleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1632DD06DA000A72418 /* SampleInfo.swift */; };
-		C63ED1662DD06DCE00A72418 /* ProcessingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1652DD06DCB00A72418 /* ProcessingOptions.swift */; };
-		C63ED1682DD06E0F00A72418 /* WaveformUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1672DD06E0D00A72418 /* WaveformUtils.swift */; };
-		C63ED16B2DD06F1300A72418 /* FileDropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED16A2DD06F1000A72418 /* FileDropView.swift */; };
-		C63ED16D2DD06F5000A72418 /* StatusIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED16C2DD06F4D00A72418 /* StatusIndicatorView.swift */; };
-		C63ED16F2DD06F7D00A72418 /* ToggleOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED16E2DD06F7B00A72418 /* ToggleOption.swift */; };
-		C63ED1712DD06FAF00A72418 /* ConversionOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1702DD06FAE00A72418 /* ConversionOptions.swift */; };
-		C63ED1732DD06FDF00A72418 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1722DD06FDD00A72418 /* AppConstants.swift */; };
-		C63ED1752DD0701B00A72418 /* FileValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1742DD0701800A72418 /* FileValidation.swift */; };
-		C63ED1782DD0718C00A72418 /* AudioTrimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1772DD0718B00A72418 /* AudioTrimmer.swift */; };
-		C63ED17B2DD0725100A72418 /* OutputDiskWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED17A2DD0724F00A72418 /* OutputDiskWriter.swift */; };
-		C63ED17D2DD072BC00A72418 /* CompatibilityAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED17C2DD072BA00A72418 /* CompatibilityAnalyzer.swift */; };
-		C63ED17F2DD0732B00A72418 /* SamplePreviewPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED17E2DD0732A00A72418 /* SamplePreviewPlayer.swift */; };
-		C63ED1812DD0738800A72418 /* DragDropHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1802DD0738600A72418 /* DragDropHandler.swift */; };
-		C63ED1832DD073D800A72418 /* StatusOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1822DD073D600A72418 /* StatusOverlayView.swift */; };
-		C63ED1882DD074BB00A72418 /* ProcessingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1872DD074B900A72418 /* ProcessingStatus.swift */; };
-		C63ED18B2DD0758A00A72418 /* TrimUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED18A2DD0758800A72418 /* TrimUtility.swift */; };
-		C63ED18D2DD075DA00A72418 /* SampleCompatibilityChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED18C2DD075D800A72418 /* SampleCompatibilityChecker.swift */; };
-		C63ED18F2DD0762000A72418 /* AudioConversionSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED18E2DD0761E00A72418 /* AudioConversionSettings.swift */; };
-		C63ED1912DD0767A00A72418 /* FileCompatibilityResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1902DD0767800A72418 /* FileCompatibilityResult.swift */; };
-		C63ED1932DD076B800A72418 /* SamplerDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1922DD076B700A72418 /* SamplerDefaults.swift */; };
-		C63ED1962DD0783A00A72418 /* SamplerAnalysisResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1952DD0783800A72418 /* SamplerAnalysisResult.swift */; };
-		C63ED1982DD0787900A72418 /* ConversionOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1972DD0787700A72418 /* ConversionOption.swift */; };
-		C63ED19A2DD078C200A72418 /* ConversionPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1992DD078C100A72418 /* ConversionPreferences.swift */; };
-		C63ED19D2DD079C000A72418 /* AudioInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED19C2DD079BC00A72418 /* AudioInfo.swift */; };
+		C6206FC22DD7C075002C1C9C /* akaiutil_take.c in Sources */ = {isa = PBXBuildFile; fileRef = C6206FB62DD7C075002C1C9C /* akaiutil_take.c */; };
+		C6206FC32DD7C075002C1C9C /* akaiutil_main.c in Sources */ = {isa = PBXBuildFile; fileRef = C6206FB42DD7C075002C1C9C /* akaiutil_main.c */; };
+		C6206FC42DD7C075002C1C9C /* akaiutil_trim.c in Sources */ = {isa = PBXBuildFile; fileRef = C6206FBA2DD7C075002C1C9C /* akaiutil_trim.c */; };
+		C6206FC52DD7C075002C1C9C /* commonlib.c in Sources */ = {isa = PBXBuildFile; fileRef = C6206FBF2DD7C075002C1C9C /* commonlib.c */; };
+		C6206FC62DD7C075002C1C9C /* akaiutil_io.c in Sources */ = {isa = PBXBuildFile; fileRef = C6206FB32DD7C075002C1C9C /* akaiutil_io.c */; };
+		C6206FC72DD7C075002C1C9C /* akaiutil_wav.c in Sources */ = {isa = PBXBuildFile; fileRef = C6206FBC2DD7C075002C1C9C /* akaiutil_wav.c */; };
+		C6206FC82DD7C075002C1C9C /* akaiutil_check.c in Sources */ = {isa = PBXBuildFile; fileRef = C6206FAF2DD7C075002C1C9C /* akaiutil_check.c */; };
+		C6206FC92DD7C075002C1C9C /* akaiutil_tar.c in Sources */ = {isa = PBXBuildFile; fileRef = C6206FB82DD7C075002C1C9C /* akaiutil_tar.c */; };
+		C6206FCA2DD7C075002C1C9C /* akaiutil_audioutils.c in Sources */ = {isa = PBXBuildFile; fileRef = C6206FAD2DD7C075002C1C9C /* akaiutil_audioutils.c */; };
+		C6206FCB2DD7C075002C1C9C /* akaiutil_file.c in Sources */ = {isa = PBXBuildFile; fileRef = C6206FB12DD7C075002C1C9C /* akaiutil_file.c */; };
+		C6206FCC2DD7C075002C1C9C /* akaiutil.c in Sources */ = {isa = PBXBuildFile; fileRef = C6206FAB2DD7C075002C1C9C /* akaiutil.c */; };
+		C62070352DD7C0E9002C1C9C /* SilenceSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C620701C2DD7C0E9002C1C9C /* SilenceSettingsView.swift */; };
+		C62070362DD7C0E9002C1C9C /* SoundPreviewPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C620701F2DD7C0E9002C1C9C /* SoundPreviewPlayer.swift */; };
+		C62070372DD7C0E9002C1C9C /* SamplerSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62070132DD7C0E9002C1C9C /* SamplerSettingsView.swift */; };
+		C62070382DD7C0E9002C1C9C /* StatusOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62070212DD7C0E9002C1C9C /* StatusOverlayView.swift */; };
+		C62070392DD7C0E9002C1C9C /* SamplerTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62070152DD7C0E9002C1C9C /* SamplerTarget.swift */; };
+		C620703A2DD7C0E9002C1C9C /* SamplerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62070162DD7C0E9002C1C9C /* SamplerType.swift */; };
+		C620703B2DD7C0E9002C1C9C /* WavPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62070302DD7C0E9002C1C9C /* WavPlayer.swift */; };
+		C620703C2DD7C0E9002C1C9C /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62070292DD7C0E9002C1C9C /* View+Extensions.swift */; };
+		C620703D2DD7C0E9002C1C9C /* SampleTaskQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62070182DD7C0E9002C1C9C /* SampleTaskQueue.swift */; };
+		C620703E2DD7C0E9002C1C9C /* TrimOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62070252DD7C0E9002C1C9C /* TrimOptions.swift */; };
+		C620703F2DD7C0E9002C1C9C /* ToggleOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62070242DD7C0E9002C1C9C /* ToggleOption.swift */; };
+		C62070402DD7C0E9002C1C9C /* WaveformPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C620702C2DD7C0E9002C1C9C /* WaveformPreview.swift */; };
+		C62070412DD7C0E9002C1C9C /* SilencePaddingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C620701B2DD7C0E9002C1C9C /* SilencePaddingView.swift */; };
+		C62070422DD7C0E9002C1C9C /* WavPreviewPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62070312DD7C0E9002C1C9C /* WavPreviewPlayer.swift */; };
+		C62070432DD7C0E9002C1C9C /* VolumeNormalizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C620702A2DD7C0E9002C1C9C /* VolumeNormalizationView.swift */; };
+		C62070442DD7C0E9002C1C9C /* WAVHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C620702F2DD7C0E9002C1C9C /* WAVHeader.swift */; };
+		C62070452DD7C0E9002C1C9C /* WavVisualizer..swift in Sources */ = {isa = PBXBuildFile; fileRef = C62070322DD7C0E9002C1C9C /* WavVisualizer..swift */; };
+		C62070462DD7C0E9002C1C9C /* WaveformUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C620702D2DD7C0E9002C1C9C /* WaveformUtils.swift */; };
+		C62070472DD7C0E9002C1C9C /* WavWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62070332DD7C0E9002C1C9C /* WavWriter.swift */; };
+		C62070482DD7C0E9002C1C9C /* SilenceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C620701E2DD7C0E9002C1C9C /* SilenceUtils.swift */; };
+		C62070492DD7C0E9002C1C9C /* WaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C620702E2DD7C0E9002C1C9C /* WaveformView.swift */; };
+		C620704A2DD7C0E9002C1C9C /* SamplerWarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62070172DD7C0E9002C1C9C /* SamplerWarningView.swift */; };
+		C620704B2DD7C0E9002C1C9C /* WaveformAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C620702B2DD7C0E9002C1C9C /* WaveformAnalyzer.swift */; };
+		C620704C2DD7C0E9002C1C9C /* TrimOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62070262DD7C0E9002C1C9C /* TrimOptionsView.swift */; };
+		C620704D2DD7C0E9002C1C9C /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C620701A2DD7C0E9002C1C9C /* SettingsManager.swift */; };
+		C620704E2DD7C0E9002C1C9C /* SamplingSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62070192DD7C0E9002C1C9C /* SamplingSettings.swift */; };
+		C620704F2DD7C0E9002C1C9C /* StatusIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62070202DD7C0E9002C1C9C /* StatusIndicatorView.swift */; };
+		C62070502DD7C0E9002C1C9C /* SilenceTrimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C620701D2DD7C0E9002C1C9C /* SilenceTrimmer.swift */; };
+		C62070512DD7C0E9002C1C9C /* TaskRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62070232DD7C0E9002C1C9C /* TaskRunner.swift */; };
+		C62070522DD7C0E9002C1C9C /* SamplerSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62070142DD7C0E9002C1C9C /* SamplerSettingsViewModel.swift */; };
+		C62070532DD7C0E9002C1C9C /* TrimUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62070272DD7C0E9002C1C9C /* TrimUtility.swift */; };
+		C62070542DD7C0E9002C1C9C /* SystemVolumeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62070222DD7C0E9002C1C9C /* SystemVolumeManager.swift */; };
+		C62070552DD7C0E9002C1C9C /* SamplerSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62070122DD7C0E9002C1C9C /* SamplerSettings.swift */; };
+		C62070562DD7C0E9002C1C9C /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62070282DD7C0E9002C1C9C /* UserPreferences.swift */; };
+		C638B9822DD83F3C000E4B43 /* SampleProcessingTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C638B9812DD83F3C000E4B43 /* SampleProcessingTask.swift */; };
+		C638B9832DD83F3C000E4B43 /* AkaiSampleTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C638B9802DD83F3C000E4B43 /* AkaiSampleTask.swift */; };
+		C638B9852DD83FE1000E4B43 /* ExportPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = C638B9842DD83FE1000E4B43 /* ExportPreferences.swift */; };
 		C63ED1E52DD087FF00A72418 /* libsndfile.1.0.37.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C63ED1BC2DD087AE00A72418 /* libsndfile.1.0.37.dylib */; };
-		C63ED1E72DD1928700A72418 /* AudioWarnings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1E62DD1928700A72418 /* AudioWarnings.swift */; };
-		C63ED1E92DD192BA00A72418 /* FileExportOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63ED1E82DD192BA00A72418 /* FileExportOptions.swift */; };
-		C679CBAE2DCDB26A001EA86B /* akaiutil_io.c in Sources */ = {isa = PBXBuildFile; fileRef = C679CBA32DCDB26A001EA86B /* akaiutil_io.c */; };
-		C679CBAF2DCDB26A001EA86B /* akaiutil_file.c in Sources */ = {isa = PBXBuildFile; fileRef = C679CBA12DCDB26A001EA86B /* akaiutil_file.c */; };
-		C679CBB02DCDB26A001EA86B /* akaiutil.c in Sources */ = {isa = PBXBuildFile; fileRef = C679CB9F2DCDB26A001EA86B /* akaiutil.c */; };
-		C679CBB12DCDB26A001EA86B /* akaiutil_main.c in Sources */ = {isa = PBXBuildFile; fileRef = C679CBA42DCDB26A001EA86B /* akaiutil_main.c */; };
-		C679CBB22DCDB26A001EA86B /* commonlib.c in Sources */ = {isa = PBXBuildFile; fileRef = C679CBAC2DCDB26A001EA86B /* commonlib.c */; };
-		C679CBB32DCDB26A001EA86B /* akaiutil_take.c in Sources */ = {isa = PBXBuildFile; fileRef = C679CBA62DCDB26A001EA86B /* akaiutil_take.c */; };
-		C679CBB42DCDB26A001EA86B /* akaiutil_tar.c in Sources */ = {isa = PBXBuildFile; fileRef = C679CBA82DCDB26A001EA86B /* akaiutil_tar.c */; };
-		C679CBB52DCDB26A001EA86B /* akaiutil_wav.c in Sources */ = {isa = PBXBuildFile; fileRef = C679CBAA2DCDB26A001EA86B /* akaiutil_wav.c */; };
 		C6C2169D2DD5A1F10021EABE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C6C2169C2DD5A1F10021EABE /* README.md */; };
 		C6C2169F2DD5A2F70021EABE /* NOTICE.me in Resources */ = {isa = PBXBuildFile; fileRef = C6C2169E2DD5A2EE0021EABE /* NOTICE.me */; };
 		C6C216A22DD5A3C10021EABE /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C6C216A12DD5A3C10021EABE /* LICENSE */; };
-		C6C8940A2DD2F00800F9C42F /* CompatibilityCheckResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C894092DD2F00300F9C42F /* CompatibilityCheckResult.swift */; };
-		C6C8940C2DD2F0FD00F9C42F /* LoadedSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C8940B2DD2F0F900F9C42F /* LoadedSample.swift */; };
-		C6C894102DD2F1A000F9C42F /* AudioExportFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C8940F2DD2F19C00F9C42F /* AudioExportFormat.swift */; };
-		C6C894142DD36DB100F9C42F /* WavWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C894132DD36DAA00F9C42F /* WavWriter.swift */; };
-		C6C894162DD4368F00F9C42F /* WAVHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C894152DD4368600F9C42F /* WAVHeader.swift */; };
-		C6CE0FF02DCDAB530028F722 /* AkaiProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CE0FEC2DCDAB530028F722 /* AkaiProcessor.swift */; };
-		C6CE0FF12DCDAB530028F722 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CE0FEE2DCDAB530028F722 /* ContentView.swift */; };
-		C6CE0FF32DCDAB530028F722 /* AkaiUtilGUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CE0FED2DCDAB530028F722 /* AkaiUtilGUIApp.swift */; };
-		C6DD189A2DD5B1C800738CC4 /* DummyBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = C6DD18992DD5B1C800738CC4 /* DummyBridge.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,127 +79,69 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C63ED08C2DD0347100A72418 /* akaiutil_trim.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = akaiutil_trim.c; sourceTree = "<group>"; };
-		C63ED08E2DD034BC00A72418 /* akaiutil_check.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = akaiutil_check.c; sourceTree = "<group>"; };
-		C63ED0902DD0370700A72418 /* akaiutil_audioutils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = akaiutil_audioutils.h; sourceTree = "<group>"; };
-		C63ED0912DD0374A00A72418 /* akaiutil_audioutils.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = akaiutil_audioutils.c; sourceTree = "<group>"; };
-		C63ED0932DD03E6A00A72418 /* akaiutil_check.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = akaiutil_check.h; sourceTree = "<group>"; };
-		C63ED0942DD03E8000A72418 /* akaiutil_trim.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = akaiutil_trim.h; sourceTree = "<group>"; };
-		C63ED0962DD0416500A72418 /* AkaiConversionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AkaiConversionManager.swift; sourceTree = "<group>"; };
-		C63ED0982DD041A500A72418 /* SamplerSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplerSettings.swift; sourceTree = "<group>"; };
-		C63ED09A2DD041DD00A72418 /* AudioCompatibilityChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioCompatibilityChecker.swift; sourceTree = "<group>"; };
-		C63ED09C2DD0420900A72418 /* AudioNormalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioNormalizer.swift; sourceTree = "<group>"; };
-		C63ED09E2DD0424700A72418 /* SamplerCompatibilityChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplerCompatibilityChecker.swift; sourceTree = "<group>"; };
-		C63ED0A02DD042C700A72418 /* SilenceTrimmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SilenceTrimmer.swift; sourceTree = "<group>"; };
-		C63ED0A22DD042FA00A72418 /* SampleNormalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleNormalizer.swift; sourceTree = "<group>"; };
-		C63ED0A52DD0435E00A72418 /* CompatibilityChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompatibilityChecker.swift; sourceTree = "<group>"; };
-		C63ED0A72DD0438C00A72418 /* SamplerOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplerOptions.swift; sourceTree = "<group>"; };
-		C63ED0A92DD043C600A72418 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
-		C63ED0AB2DD043EC00A72418 /* ExportPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportPreferences.swift; sourceTree = "<group>"; };
-		C63ED0AD2DD0441200A72418 /* SamplerTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplerTarget.swift; sourceTree = "<group>"; };
-		C63ED0AF2DD0444700A72418 /* ConversionSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionSettings.swift; sourceTree = "<group>"; };
-		C63ED0B12DD0447C00A72418 /* AudioUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioUtils.swift; sourceTree = "<group>"; };
-		C63ED0B32DD04BFD00A72418 /* FormatChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatChecker.swift; sourceTree = "<group>"; };
-		C63ED0B52DD04C2B00A72418 /* SamplerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplerModel.swift; sourceTree = "<group>"; };
-		C63ED0B82DD04CF200A72418 /* AkaiSampler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AkaiSampler.swift; sourceTree = "<group>"; };
-		C63ED0BA2DD04D4500A72418 /* OutputDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputDestination.swift; sourceTree = "<group>"; };
-		C63ED0BC2DD04E3400A72418 /* AudioProcessingOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioProcessingOptions.swift; sourceTree = "<group>"; };
-		C63ED0C12DD04F8100A72418 /* AudioSilenceTrimmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSilenceTrimmer.swift; sourceTree = "<group>"; };
-		C63ED0C32DD04FBD00A72418 /* AudioPreviewPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPreviewPlayer.swift; sourceTree = "<group>"; };
-		C63ED0C52DD04FFB00A72418 /* SampleConversionUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleConversionUtils.swift; sourceTree = "<group>"; };
-		C63ED0C72DD0503E00A72418 /* FileNamingUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileNamingUtils.swift; sourceTree = "<group>"; };
-		C63ED0CB2DD050B000A72418 /* SilenceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SilenceUtils.swift; sourceTree = "<group>"; };
-		C63ED0CD2DD050F900A72418 /* NormalizationUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalizationUtils.swift; sourceTree = "<group>"; };
-		C63ED0D02DD0518800A72418 /* PreviewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewUtils.swift; sourceTree = "<group>"; };
-		C63ED0D22DD051B200A72418 /* WaveformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformView.swift; sourceTree = "<group>"; };
-		C63ED0D42DD051F500A72418 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
-		C63ED0D82DD0562E00A72418 /* WaveformAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformAnalyzer.swift; sourceTree = "<group>"; };
-		C63ED0DA2DD0568400A72418 /* CompatibilityFixer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompatibilityFixer.swift; sourceTree = "<group>"; };
-		C63ED0DD2DD0570000A72418 /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
-		C63ED0E02DD0578500A72418 /* AudioConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioConverter.swift; sourceTree = "<group>"; };
-		C63ED0E22DD057AE00A72418 /* SamplerCompatibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplerCompatibility.swift; sourceTree = "<group>"; };
-		C63ED0EA2DD05AF500A72418 /* AudioValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioValidation.swift; sourceTree = "<group>"; };
-		C63ED0EC2DD05B4F00A72418 /* AudioUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioUtility.swift; sourceTree = "<group>"; };
-		C63ED0EF2DD05BF300A72418 /* SamplerOutputOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplerOutputOption.swift; sourceTree = "<group>"; };
-		C63ED0F12DD05C3B00A72418 /* SamplerSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplerSettingsViewModel.swift; sourceTree = "<group>"; };
-		C63ED0F32DD05C8000A72418 /* OutputSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputSettingsView.swift; sourceTree = "<group>"; };
-		C63ED0F52DD05CCC00A72418 /* ProcessingOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessingOptionsView.swift; sourceTree = "<group>"; };
-		C63ED0F82DD05D6100A72418 /* FileSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSettingsViewModel.swift; sourceTree = "<group>"; };
-		C63ED0FA2DD05DA400A72418 /* ProgressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewModel.swift; sourceTree = "<group>"; };
-		C63ED0FC2DD05DEE00A72418 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
-		C63ED0FE2DD05E2800A72418 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
-		C63ED1012DD05ECE00A72418 /* WaveformPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformPreview.swift; sourceTree = "<group>"; };
-		C63ED1032DD05F2200A72418 /* AudioPlaybackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlaybackView.swift; sourceTree = "<group>"; };
-		C63ED1052DD05FE000A72418 /* WavPreviewPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavPreviewPlayer.swift; sourceTree = "<group>"; };
-		C63ED1072DD0611700A72418 /* WavVisualizer..swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavVisualizer..swift; sourceTree = "<group>"; };
-		C63ED1092DD0614B00A72418 /* WavPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavPlayer.swift; sourceTree = "<group>"; };
-		C63ED10D2DD062B500A72418 /* OutputPathHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputPathHelper.swift; sourceTree = "<group>"; };
-		C63ED10F2DD0630900A72418 /* SamplerOutputTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplerOutputTarget.swift; sourceTree = "<group>"; };
-		C63ED1112DD0633400A72418 /* SoundPreviewPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPreviewPlayer.swift; sourceTree = "<group>"; };
-		C63ED1132DD0636600A72418 /* SystemVolumeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemVolumeManager.swift; sourceTree = "<group>"; };
-		C63ED1152DD063EC00A72418 /* TrimOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimOptions.swift; sourceTree = "<group>"; };
-		C63ED1172DD0642400A72418 /* AppPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPreferences.swift; sourceTree = "<group>"; };
-		C63ED1192DD0645300A72418 /* SampleProcessingTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleProcessingTask.swift; sourceTree = "<group>"; };
-		C63ED11B2DD064AF00A72418 /* SampleTaskQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTaskQueue.swift; sourceTree = "<group>"; };
-		C63ED11D2DD064FE00A72418 /* TaskRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRunner.swift; sourceTree = "<group>"; };
-		C63ED11F2DD065E500A72418 /* DragDropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragDropView.swift; sourceTree = "<group>"; };
-		C63ED1212DD0662F00A72418 /* DragDropController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragDropController.swift; sourceTree = "<group>"; };
-		C63ED1232DD0667B00A72418 /* OutputPathSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputPathSelector.swift; sourceTree = "<group>"; };
-		C63ED1252DD066D200A72418 /* ProcessingProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessingProgress.swift; sourceTree = "<group>"; };
-		C63ED1272DD0672200A72418 /* SamplingSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplingSettings.swift; sourceTree = "<group>"; };
-		C63ED1292DD0677000A72418 /* SamplerSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplerSelectionView.swift; sourceTree = "<group>"; };
-		C63ED12B2DD067B000A72418 /* TrimOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimOptionsView.swift; sourceTree = "<group>"; };
-		C63ED12D2DD067DF00A72418 /* MonoConversionToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonoConversionToggle.swift; sourceTree = "<group>"; };
-		C63ED12F2DD0682800A72418 /* OutputFormatSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputFormatSettingsView.swift; sourceTree = "<group>"; };
-		C63ED1312DD0685D00A72418 /* ConversionBehaviorSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionBehaviorSettingsView.swift; sourceTree = "<group>"; };
-		C63ED1332DD0689D00A72418 /* CompatibilitySettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompatibilitySettingsView.swift; sourceTree = "<group>"; };
-		C63ED1352DD068C500A72418 /* NormalizationSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalizationSettingsView.swift; sourceTree = "<group>"; };
-		C63ED1372DD068EF00A72418 /* PaddingSilenceSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingSilenceSettingsView.swift; sourceTree = "<group>"; };
-		C63ED1392DD0692200A72418 /* NormalizeSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalizeSettingsView.swift; sourceTree = "<group>"; };
-		C63ED13B2DD0695500A72418 /* SilenceSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SilenceSettingsView.swift; sourceTree = "<group>"; };
-		C63ED13D2DD0698500A72418 /* VolumeNormalizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeNormalizationView.swift; sourceTree = "<group>"; };
-		C63ED13F2DD069B500A72418 /* SilencePaddingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SilencePaddingView.swift; sourceTree = "<group>"; };
-		C63ED1412DD069E100A72418 /* SampleRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleRateView.swift; sourceTree = "<group>"; };
-		C63ED1432DD06A0A00A72418 /* BitDepthPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitDepthPicker.swift; sourceTree = "<group>"; };
-		C63ED1452DD06A3700A72418 /* FormatTargetOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatTargetOptions.swift; sourceTree = "<group>"; };
-		C63ED1472DD06A5E00A72418 /* HelpToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpToggleView.swift; sourceTree = "<group>"; };
-		C63ED1492DD06A8C00A72418 /* SamplerWarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplerWarningView.swift; sourceTree = "<group>"; };
-		C63ED14B2DD06AB400A72418 /* SampleInfoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleInfoRow.swift; sourceTree = "<group>"; };
-		C63ED14D2DD06AE900A72418 /* FileDropZone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDropZone.swift; sourceTree = "<group>"; };
-		C63ED14F2DD06B1400A72418 /* FileDropZone_Previews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDropZone_Previews.swift; sourceTree = "<group>"; };
-		C63ED1512DD06B3E00A72418 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C63ED1542DD06BA800A72418 /* SamplerSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplerSettingsView.swift; sourceTree = "<group>"; };
-		C63ED1562DD06BD700A72418 /* CompatibilityCheckResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompatibilityCheckResultView.swift; sourceTree = "<group>"; };
-		C63ED1582DD06C0A00A72418 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
-		C63ED15A2DD06C3D00A72418 /* FileListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileListRow.swift; sourceTree = "<group>"; };
-		C63ED15C2DD06C6A00A72418 /* MonoConversionSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonoConversionSettings.swift; sourceTree = "<group>"; };
-		C63ED15E2DD06CB900A72418 /* PreviewPlayback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewPlayback.swift; sourceTree = "<group>"; };
-		C63ED1612DD06D3600A72418 /* FileConversionTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileConversionTask.swift; sourceTree = "<group>"; };
-		C63ED1632DD06DA000A72418 /* SampleInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleInfo.swift; sourceTree = "<group>"; };
-		C63ED1652DD06DCB00A72418 /* ProcessingOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessingOptions.swift; sourceTree = "<group>"; };
-		C63ED1672DD06E0D00A72418 /* WaveformUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformUtils.swift; sourceTree = "<group>"; };
-		C63ED16A2DD06F1000A72418 /* FileDropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDropView.swift; sourceTree = "<group>"; };
-		C63ED16C2DD06F4D00A72418 /* StatusIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusIndicatorView.swift; sourceTree = "<group>"; };
-		C63ED16E2DD06F7B00A72418 /* ToggleOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleOption.swift; sourceTree = "<group>"; };
-		C63ED1702DD06FAE00A72418 /* ConversionOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionOptions.swift; sourceTree = "<group>"; };
-		C63ED1722DD06FDD00A72418 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
-		C63ED1742DD0701800A72418 /* FileValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileValidation.swift; sourceTree = "<group>"; };
-		C63ED1772DD0718B00A72418 /* AudioTrimmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTrimmer.swift; sourceTree = "<group>"; };
-		C63ED17A2DD0724F00A72418 /* OutputDiskWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputDiskWriter.swift; sourceTree = "<group>"; };
-		C63ED17C2DD072BA00A72418 /* CompatibilityAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompatibilityAnalyzer.swift; sourceTree = "<group>"; };
-		C63ED17E2DD0732A00A72418 /* SamplePreviewPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplePreviewPlayer.swift; sourceTree = "<group>"; };
-		C63ED1802DD0738600A72418 /* DragDropHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragDropHandler.swift; sourceTree = "<group>"; };
-		C63ED1822DD073D600A72418 /* StatusOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusOverlayView.swift; sourceTree = "<group>"; };
-		C63ED1872DD074B900A72418 /* ProcessingStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessingStatus.swift; sourceTree = "<group>"; };
-		C63ED18A2DD0758800A72418 /* TrimUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimUtility.swift; sourceTree = "<group>"; };
-		C63ED18C2DD075D800A72418 /* SampleCompatibilityChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCompatibilityChecker.swift; sourceTree = "<group>"; };
-		C63ED18E2DD0761E00A72418 /* AudioConversionSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioConversionSettings.swift; sourceTree = "<group>"; };
-		C63ED1902DD0767800A72418 /* FileCompatibilityResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileCompatibilityResult.swift; sourceTree = "<group>"; };
-		C63ED1922DD076B700A72418 /* SamplerDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplerDefaults.swift; sourceTree = "<group>"; };
-		C63ED1952DD0783800A72418 /* SamplerAnalysisResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplerAnalysisResult.swift; sourceTree = "<group>"; };
-		C63ED1972DD0787700A72418 /* ConversionOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionOption.swift; sourceTree = "<group>"; };
-		C63ED1992DD078C100A72418 /* ConversionPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionPreferences.swift; sourceTree = "<group>"; };
-		C63ED19C2DD079BC00A72418 /* AudioInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioInfo.swift; sourceTree = "<group>"; };
+		C6206FA92DD7C075002C1C9C /* akai_constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = akai_constants.h; sourceTree = "<group>"; };
+		C6206FAA2DD7C075002C1C9C /* akaiutil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = akaiutil.h; sourceTree = "<group>"; };
+		C6206FAB2DD7C075002C1C9C /* akaiutil.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = akaiutil.c; sourceTree = "<group>"; };
+		C6206FAC2DD7C075002C1C9C /* akaiutil_audioutils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = akaiutil_audioutils.h; sourceTree = "<group>"; };
+		C6206FAD2DD7C075002C1C9C /* akaiutil_audioutils.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = akaiutil_audioutils.c; sourceTree = "<group>"; };
+		C6206FAE2DD7C075002C1C9C /* akaiutil_check.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = akaiutil_check.h; sourceTree = "<group>"; };
+		C6206FAF2DD7C075002C1C9C /* akaiutil_check.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = akaiutil_check.c; sourceTree = "<group>"; };
+		C6206FB02DD7C075002C1C9C /* akaiutil_file.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = akaiutil_file.h; sourceTree = "<group>"; };
+		C6206FB12DD7C075002C1C9C /* akaiutil_file.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = akaiutil_file.c; sourceTree = "<group>"; };
+		C6206FB22DD7C075002C1C9C /* akaiutil_io.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = akaiutil_io.h; sourceTree = "<group>"; };
+		C6206FB32DD7C075002C1C9C /* akaiutil_io.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = akaiutil_io.c; sourceTree = "<group>"; };
+		C6206FB42DD7C075002C1C9C /* akaiutil_main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = akaiutil_main.c; sourceTree = "<group>"; };
+		C6206FB52DD7C075002C1C9C /* akaiutil_take.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = akaiutil_take.h; sourceTree = "<group>"; };
+		C6206FB62DD7C075002C1C9C /* akaiutil_take.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = akaiutil_take.c; sourceTree = "<group>"; };
+		C6206FB72DD7C075002C1C9C /* akaiutil_tar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = akaiutil_tar.h; sourceTree = "<group>"; };
+		C6206FB82DD7C075002C1C9C /* akaiutil_tar.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = akaiutil_tar.c; sourceTree = "<group>"; };
+		C6206FB92DD7C075002C1C9C /* akaiutil_trim.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = akaiutil_trim.h; sourceTree = "<group>"; };
+		C6206FBA2DD7C075002C1C9C /* akaiutil_trim.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = akaiutil_trim.c; sourceTree = "<group>"; };
+		C6206FBB2DD7C075002C1C9C /* akaiutil_wav.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = akaiutil_wav.h; sourceTree = "<group>"; };
+		C6206FBC2DD7C075002C1C9C /* akaiutil_wav.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = akaiutil_wav.c; sourceTree = "<group>"; };
+		C6206FBD2DD7C075002C1C9C /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		C6206FBE2DD7C075002C1C9C /* commoninclude.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = commoninclude.h; sourceTree = "<group>"; };
+		C6206FBF2DD7C075002C1C9C /* commonlib.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = commonlib.c; sourceTree = "<group>"; };
+		C6206FC02DD7C075002C1C9C /* fdrawcmd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fdrawcmd.h; sourceTree = "<group>"; };
+		C62070122DD7C0E9002C1C9C /* SamplerSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplerSettings.swift; sourceTree = "<group>"; };
+		C62070132DD7C0E9002C1C9C /* SamplerSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplerSettingsView.swift; sourceTree = "<group>"; };
+		C62070142DD7C0E9002C1C9C /* SamplerSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplerSettingsViewModel.swift; sourceTree = "<group>"; };
+		C62070152DD7C0E9002C1C9C /* SamplerTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplerTarget.swift; sourceTree = "<group>"; };
+		C62070162DD7C0E9002C1C9C /* SamplerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplerType.swift; sourceTree = "<group>"; };
+		C62070172DD7C0E9002C1C9C /* SamplerWarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplerWarningView.swift; sourceTree = "<group>"; };
+		C62070182DD7C0E9002C1C9C /* SampleTaskQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTaskQueue.swift; sourceTree = "<group>"; };
+		C62070192DD7C0E9002C1C9C /* SamplingSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplingSettings.swift; sourceTree = "<group>"; };
+		C620701A2DD7C0E9002C1C9C /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
+		C620701B2DD7C0E9002C1C9C /* SilencePaddingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SilencePaddingView.swift; sourceTree = "<group>"; };
+		C620701C2DD7C0E9002C1C9C /* SilenceSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SilenceSettingsView.swift; sourceTree = "<group>"; };
+		C620701D2DD7C0E9002C1C9C /* SilenceTrimmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SilenceTrimmer.swift; sourceTree = "<group>"; };
+		C620701E2DD7C0E9002C1C9C /* SilenceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SilenceUtils.swift; sourceTree = "<group>"; };
+		C620701F2DD7C0E9002C1C9C /* SoundPreviewPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPreviewPlayer.swift; sourceTree = "<group>"; };
+		C62070202DD7C0E9002C1C9C /* StatusIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusIndicatorView.swift; sourceTree = "<group>"; };
+		C62070212DD7C0E9002C1C9C /* StatusOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusOverlayView.swift; sourceTree = "<group>"; };
+		C62070222DD7C0E9002C1C9C /* SystemVolumeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemVolumeManager.swift; sourceTree = "<group>"; };
+		C62070232DD7C0E9002C1C9C /* TaskRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRunner.swift; sourceTree = "<group>"; };
+		C62070242DD7C0E9002C1C9C /* ToggleOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleOption.swift; sourceTree = "<group>"; };
+		C62070252DD7C0E9002C1C9C /* TrimOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimOptions.swift; sourceTree = "<group>"; };
+		C62070262DD7C0E9002C1C9C /* TrimOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimOptionsView.swift; sourceTree = "<group>"; };
+		C62070272DD7C0E9002C1C9C /* TrimUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimUtility.swift; sourceTree = "<group>"; };
+		C62070282DD7C0E9002C1C9C /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
+		C62070292DD7C0E9002C1C9C /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		C620702A2DD7C0E9002C1C9C /* VolumeNormalizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeNormalizationView.swift; sourceTree = "<group>"; };
+		C620702B2DD7C0E9002C1C9C /* WaveformAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformAnalyzer.swift; sourceTree = "<group>"; };
+		C620702C2DD7C0E9002C1C9C /* WaveformPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformPreview.swift; sourceTree = "<group>"; };
+		C620702D2DD7C0E9002C1C9C /* WaveformUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformUtils.swift; sourceTree = "<group>"; };
+		C620702E2DD7C0E9002C1C9C /* WaveformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformView.swift; sourceTree = "<group>"; };
+		C620702F2DD7C0E9002C1C9C /* WAVHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAVHeader.swift; sourceTree = "<group>"; };
+		C62070302DD7C0E9002C1C9C /* WavPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavPlayer.swift; sourceTree = "<group>"; };
+		C62070312DD7C0E9002C1C9C /* WavPreviewPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavPreviewPlayer.swift; sourceTree = "<group>"; };
+		C62070322DD7C0E9002C1C9C /* WavVisualizer..swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavVisualizer..swift; sourceTree = "<group>"; };
+		C62070332DD7C0E9002C1C9C /* WavWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavWriter.swift; sourceTree = "<group>"; };
+		C638B9802DD83F3C000E4B43 /* AkaiSampleTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AkaiSampleTask.swift; sourceTree = "<group>"; };
+		C638B9812DD83F3C000E4B43 /* SampleProcessingTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleProcessingTask.swift; sourceTree = "<group>"; };
+		C638B9842DD83FE1000E4B43 /* ExportPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportPreferences.swift; sourceTree = "<group>"; };
+		C638B9862DD84671000E4B43 /* sample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sample.h; sourceTree = "<group>"; };
+		C638B9902DD84D3F000E4B43 /* akaiutil_constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = akaiutil_constants.h; sourceTree = "<group>"; };
 		C63ED1A12DD087AE00A72418 /* libsndfile.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = libsndfile.rb; sourceTree = "<group>"; };
 		C63ED1A32DD087AE00A72418 /* sndfile-cmp */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "sndfile-cmp"; sourceTree = "<group>"; };
 		C63ED1A42DD087AE00A72418 /* sndfile-concat */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "sndfile-concat"; sourceTree = "<group>"; };
@@ -344,41 +197,12 @@
 		C63ED1E12DD087AE00A72418 /* INSTALL_RECEIPT.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = INSTALL_RECEIPT.json; sourceTree = "<group>"; };
 		C63ED1E22DD087AE00A72418 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		C63ED1E32DD087AE00A72418 /* sbom.spdx.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sbom.spdx.json; sourceTree = "<group>"; };
-		C63ED1E62DD1928700A72418 /* AudioWarnings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioWarnings.swift; sourceTree = "<group>"; };
-		C63ED1E82DD192BA00A72418 /* FileExportOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileExportOptions.swift; sourceTree = "<group>"; };
-		C63ED1EA2DD1965400A72418 /* akai_constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = akai_constants.h; sourceTree = "<group>"; };
-		C679CB9E2DCDB26A001EA86B /* akaiutil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = akaiutil.h; sourceTree = "<group>"; };
-		C679CB9F2DCDB26A001EA86B /* akaiutil.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = akaiutil.c; sourceTree = "<group>"; };
-		C679CBA02DCDB26A001EA86B /* akaiutil_file.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = akaiutil_file.h; sourceTree = "<group>"; };
-		C679CBA12DCDB26A001EA86B /* akaiutil_file.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = akaiutil_file.c; sourceTree = "<group>"; };
-		C679CBA22DCDB26A001EA86B /* akaiutil_io.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = akaiutil_io.h; sourceTree = "<group>"; };
-		C679CBA32DCDB26A001EA86B /* akaiutil_io.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = akaiutil_io.c; sourceTree = "<group>"; };
-		C679CBA42DCDB26A001EA86B /* akaiutil_main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = akaiutil_main.c; sourceTree = "<group>"; };
-		C679CBA52DCDB26A001EA86B /* akaiutil_take.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = akaiutil_take.h; sourceTree = "<group>"; };
-		C679CBA62DCDB26A001EA86B /* akaiutil_take.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = akaiutil_take.c; sourceTree = "<group>"; };
-		C679CBA72DCDB26A001EA86B /* akaiutil_tar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = akaiutil_tar.h; sourceTree = "<group>"; };
-		C679CBA82DCDB26A001EA86B /* akaiutil_tar.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = akaiutil_tar.c; sourceTree = "<group>"; };
-		C679CBA92DCDB26A001EA86B /* akaiutil_wav.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = akaiutil_wav.h; sourceTree = "<group>"; };
-		C679CBAA2DCDB26A001EA86B /* akaiutil_wav.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = akaiutil_wav.c; sourceTree = "<group>"; };
-		C679CBAB2DCDB26A001EA86B /* commoninclude.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = commoninclude.h; sourceTree = "<group>"; };
-		C679CBAC2DCDB26A001EA86B /* commonlib.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = commonlib.c; sourceTree = "<group>"; };
-		C679CBAD2DCDB26A001EA86B /* fdrawcmd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fdrawcmd.h; sourceTree = "<group>"; };
 		C6C2169C2DD5A1F10021EABE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C6C2169E2DD5A2EE0021EABE /* NOTICE.me */ = {isa = PBXFileReference; lastKnownFileType = text; path = NOTICE.me; sourceTree = "<group>"; };
 		C6C216A12DD5A3C10021EABE /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		C6C894092DD2F00300F9C42F /* CompatibilityCheckResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompatibilityCheckResult.swift; sourceTree = "<group>"; };
-		C6C8940B2DD2F0F900F9C42F /* LoadedSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadedSample.swift; sourceTree = "<group>"; };
-		C6C8940F2DD2F19C00F9C42F /* AudioExportFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioExportFormat.swift; sourceTree = "<group>"; };
-		C6C894132DD36DAA00F9C42F /* WavWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavWriter.swift; sourceTree = "<group>"; };
-		C6C894152DD4368600F9C42F /* WAVHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAVHeader.swift; sourceTree = "<group>"; };
 		C6CE0FB12DCDA7AD0028F722 /* AkaiSConvert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AkaiSConvert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6CE0FBF2DCDA7AF0028F722 /* AkaiSConvertTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AkaiSConvertTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6CE0FC92DCDA7AF0028F722 /* AkaiSConvertUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AkaiSConvertUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C6CE0FE82DCDAB530028F722 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
-		C6CE0FEC2DCDAB530028F722 /* AkaiProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AkaiProcessor.swift; sourceTree = "<group>"; };
-		C6CE0FED2DCDAB530028F722 /* AkaiUtilGUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AkaiUtilGUIApp.swift; sourceTree = "<group>"; };
-		C6CE0FEE2DCDAB530028F722 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		C6DD18992DD5B1C800738CC4 /* DummyBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DummyBridge.m; sourceTree = "<group>"; };
 		C6E553C42DD1AE5000403630 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -426,6 +250,83 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C6206FC12DD7C075002C1C9C /* C */ = {
+			isa = PBXGroup;
+			children = (
+				C638B9902DD84D3F000E4B43 /* akaiutil_constants.h */,
+				C638B9862DD84671000E4B43 /* sample.h */,
+				C6206FA92DD7C075002C1C9C /* akai_constants.h */,
+				C6206FAA2DD7C075002C1C9C /* akaiutil.h */,
+				C6206FAB2DD7C075002C1C9C /* akaiutil.c */,
+				C6206FAC2DD7C075002C1C9C /* akaiutil_audioutils.h */,
+				C6206FAD2DD7C075002C1C9C /* akaiutil_audioutils.c */,
+				C6206FAE2DD7C075002C1C9C /* akaiutil_check.h */,
+				C6206FAF2DD7C075002C1C9C /* akaiutil_check.c */,
+				C6206FB02DD7C075002C1C9C /* akaiutil_file.h */,
+				C6206FB12DD7C075002C1C9C /* akaiutil_file.c */,
+				C6206FB22DD7C075002C1C9C /* akaiutil_io.h */,
+				C6206FB32DD7C075002C1C9C /* akaiutil_io.c */,
+				C6206FB42DD7C075002C1C9C /* akaiutil_main.c */,
+				C6206FB52DD7C075002C1C9C /* akaiutil_take.h */,
+				C6206FB62DD7C075002C1C9C /* akaiutil_take.c */,
+				C6206FB72DD7C075002C1C9C /* akaiutil_tar.h */,
+				C6206FB82DD7C075002C1C9C /* akaiutil_tar.c */,
+				C6206FB92DD7C075002C1C9C /* akaiutil_trim.h */,
+				C6206FBA2DD7C075002C1C9C /* akaiutil_trim.c */,
+				C6206FBB2DD7C075002C1C9C /* akaiutil_wav.h */,
+				C6206FBC2DD7C075002C1C9C /* akaiutil_wav.c */,
+				C6206FBD2DD7C075002C1C9C /* Bridging-Header.h */,
+				C6206FBE2DD7C075002C1C9C /* commoninclude.h */,
+				C6206FBF2DD7C075002C1C9C /* commonlib.c */,
+				C6206FC02DD7C075002C1C9C /* fdrawcmd.h */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		C62070342DD7C0E9002C1C9C /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				C638B9842DD83FE1000E4B43 /* ExportPreferences.swift */,
+				C638B9802DD83F3C000E4B43 /* AkaiSampleTask.swift */,
+				C638B9812DD83F3C000E4B43 /* SampleProcessingTask.swift */,
+				C62070122DD7C0E9002C1C9C /* SamplerSettings.swift */,
+				C62070132DD7C0E9002C1C9C /* SamplerSettingsView.swift */,
+				C62070142DD7C0E9002C1C9C /* SamplerSettingsViewModel.swift */,
+				C62070152DD7C0E9002C1C9C /* SamplerTarget.swift */,
+				C62070162DD7C0E9002C1C9C /* SamplerType.swift */,
+				C62070172DD7C0E9002C1C9C /* SamplerWarningView.swift */,
+				C62070182DD7C0E9002C1C9C /* SampleTaskQueue.swift */,
+				C62070192DD7C0E9002C1C9C /* SamplingSettings.swift */,
+				C620701A2DD7C0E9002C1C9C /* SettingsManager.swift */,
+				C620701B2DD7C0E9002C1C9C /* SilencePaddingView.swift */,
+				C620701C2DD7C0E9002C1C9C /* SilenceSettingsView.swift */,
+				C620701D2DD7C0E9002C1C9C /* SilenceTrimmer.swift */,
+				C620701E2DD7C0E9002C1C9C /* SilenceUtils.swift */,
+				C620701F2DD7C0E9002C1C9C /* SoundPreviewPlayer.swift */,
+				C62070202DD7C0E9002C1C9C /* StatusIndicatorView.swift */,
+				C62070212DD7C0E9002C1C9C /* StatusOverlayView.swift */,
+				C62070222DD7C0E9002C1C9C /* SystemVolumeManager.swift */,
+				C62070232DD7C0E9002C1C9C /* TaskRunner.swift */,
+				C62070242DD7C0E9002C1C9C /* ToggleOption.swift */,
+				C62070252DD7C0E9002C1C9C /* TrimOptions.swift */,
+				C62070262DD7C0E9002C1C9C /* TrimOptionsView.swift */,
+				C62070272DD7C0E9002C1C9C /* TrimUtility.swift */,
+				C62070282DD7C0E9002C1C9C /* UserPreferences.swift */,
+				C62070292DD7C0E9002C1C9C /* View+Extensions.swift */,
+				C620702A2DD7C0E9002C1C9C /* VolumeNormalizationView.swift */,
+				C620702B2DD7C0E9002C1C9C /* WaveformAnalyzer.swift */,
+				C620702C2DD7C0E9002C1C9C /* WaveformPreview.swift */,
+				C620702D2DD7C0E9002C1C9C /* WaveformUtils.swift */,
+				C620702E2DD7C0E9002C1C9C /* WaveformView.swift */,
+				C620702F2DD7C0E9002C1C9C /* WAVHeader.swift */,
+				C62070302DD7C0E9002C1C9C /* WavPlayer.swift */,
+				C62070312DD7C0E9002C1C9C /* WavPreviewPlayer.swift */,
+				C62070322DD7C0E9002C1C9C /* WavVisualizer..swift */,
+				C62070332DD7C0E9002C1C9C /* WavWriter.swift */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
 		C63ED1A02DD087AE00A72418 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -596,42 +497,17 @@
 		C6CE0FA82DCDA7AD0028F722 = {
 			isa = PBXGroup;
 			children = (
-				C6DD18992DD5B1C800738CC4 /* DummyBridge.m */,
 				C6C216A12DD5A3C10021EABE /* LICENSE */,
 				C6C2169C2DD5A1F10021EABE /* README.md */,
 				C6C2169E2DD5A2EE0021EABE /* NOTICE.me */,
 				C6E553C42DD1AE5000403630 /* module.modulemap */,
-				C63ED1EA2DD1965400A72418 /* akai_constants.h */,
-				C679CB9E2DCDB26A001EA86B /* akaiutil.h */,
-				C679CB9F2DCDB26A001EA86B /* akaiutil.c */,
-				C679CBA02DCDB26A001EA86B /* akaiutil_file.h */,
-				C679CBA12DCDB26A001EA86B /* akaiutil_file.c */,
-				C679CBA22DCDB26A001EA86B /* akaiutil_io.h */,
-				C679CBA32DCDB26A001EA86B /* akaiutil_io.c */,
-				C63ED0902DD0370700A72418 /* akaiutil_audioutils.h */,
-				C63ED0912DD0374A00A72418 /* akaiutil_audioutils.c */,
-				C679CBA42DCDB26A001EA86B /* akaiutil_main.c */,
-				C679CBA52DCDB26A001EA86B /* akaiutil_take.h */,
-				C679CBA62DCDB26A001EA86B /* akaiutil_take.c */,
-				C63ED08C2DD0347100A72418 /* akaiutil_trim.c */,
-				C63ED08E2DD034BC00A72418 /* akaiutil_check.c */,
-				C63ED0932DD03E6A00A72418 /* akaiutil_check.h */,
-				C63ED0942DD03E8000A72418 /* akaiutil_trim.h */,
-				C679CBA72DCDB26A001EA86B /* akaiutil_tar.h */,
-				C679CBA82DCDB26A001EA86B /* akaiutil_tar.c */,
-				C679CBA92DCDB26A001EA86B /* akaiutil_wav.h */,
-				C679CBAA2DCDB26A001EA86B /* akaiutil_wav.c */,
-				C679CBAB2DCDB26A001EA86B /* commoninclude.h */,
-				C679CBAC2DCDB26A001EA86B /* commonlib.c */,
-				C679CBAD2DCDB26A001EA86B /* fdrawcmd.h */,
-				C6CE0FE82DCDAB530028F722 /* Bridging-Header.h */,
-				C6CE0FEB2DCDAB530028F722 /* C */,
-				C6CE0FEF2DCDAB530028F722 /* Swift */,
 				C6CE0FB32DCDA7AD0028F722 /* AkaiSConvert */,
 				C6CE0FC22DCDA7AF0028F722 /* AkaiSConvertTests */,
 				C6CE0FCC2DCDA7AF0028F722 /* AkaiSConvertUITests */,
 				C63ED1A02DD087AE00A72418 /* Frameworks */,
 				C6CE0FB22DCDA7AD0028F722 /* Products */,
+				C6206FC12DD7C075002C1C9C /* C */,
+				C62070342DD7C0E9002C1C9C /* Swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -643,145 +519,6 @@
 				C6CE0FC92DCDA7AF0028F722 /* AkaiSConvertUITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		C6CE0FEB2DCDAB530028F722 /* C */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = C;
-			sourceTree = "<group>";
-		};
-		C6CE0FEF2DCDAB530028F722 /* Swift */ = {
-			isa = PBXGroup;
-			children = (
-				C6C894132DD36DAA00F9C42F /* WavWriter.swift */,
-				C6C894152DD4368600F9C42F /* WAVHeader.swift */,
-				C63ED1E82DD192BA00A72418 /* FileExportOptions.swift */,
-				C63ED1E62DD1928700A72418 /* AudioWarnings.swift */,
-				C63ED0CB2DD050B000A72418 /* SilenceUtils.swift */,
-				C63ED0D02DD0518800A72418 /* PreviewUtils.swift */,
-				C63ED0D22DD051B200A72418 /* WaveformView.swift */,
-				C63ED1012DD05ECE00A72418 /* WaveformPreview.swift */,
-				C63ED16A2DD06F1000A72418 /* FileDropView.swift */,
-				C63ED16C2DD06F4D00A72418 /* StatusIndicatorView.swift */,
-				C63ED16E2DD06F7B00A72418 /* ToggleOption.swift */,
-				C63ED1702DD06FAE00A72418 /* ConversionOptions.swift */,
-				C63ED1722DD06FDD00A72418 /* AppConstants.swift */,
-				C63ED1742DD0701800A72418 /* FileValidation.swift */,
-				C63ED10D2DD062B500A72418 /* OutputPathHelper.swift */,
-				C63ED10F2DD0630900A72418 /* SamplerOutputTarget.swift */,
-				C63ED1112DD0633400A72418 /* SoundPreviewPlayer.swift */,
-				C63ED1132DD0636600A72418 /* SystemVolumeManager.swift */,
-				C63ED1152DD063EC00A72418 /* TrimOptions.swift */,
-				C63ED1872DD074B900A72418 /* ProcessingStatus.swift */,
-				C63ED1172DD0642400A72418 /* AppPreferences.swift */,
-				C63ED1192DD0645300A72418 /* SampleProcessingTask.swift */,
-				C63ED11B2DD064AF00A72418 /* SampleTaskQueue.swift */,
-				C63ED11D2DD064FE00A72418 /* TaskRunner.swift */,
-				C63ED11F2DD065E500A72418 /* DragDropView.swift */,
-				C63ED1542DD06BA800A72418 /* SamplerSettingsView.swift */,
-				C63ED1562DD06BD700A72418 /* CompatibilityCheckResultView.swift */,
-				C63ED1582DD06C0A00A72418 /* ProgressBar.swift */,
-				C63ED15A2DD06C3D00A72418 /* FileListRow.swift */,
-				C63ED15C2DD06C6A00A72418 /* MonoConversionSettings.swift */,
-				C63ED15E2DD06CB900A72418 /* PreviewPlayback.swift */,
-				C63ED1212DD0662F00A72418 /* DragDropController.swift */,
-				C63ED1232DD0667B00A72418 /* OutputPathSelector.swift */,
-				C63ED1252DD066D200A72418 /* ProcessingProgress.swift */,
-				C63ED1272DD0672200A72418 /* SamplingSettings.swift */,
-				C63ED1292DD0677000A72418 /* SamplerSelectionView.swift */,
-				C63ED12B2DD067B000A72418 /* TrimOptionsView.swift */,
-				C63ED12D2DD067DF00A72418 /* MonoConversionToggle.swift */,
-				C63ED12F2DD0682800A72418 /* OutputFormatSettingsView.swift */,
-				C63ED1312DD0685D00A72418 /* ConversionBehaviorSettingsView.swift */,
-				C63ED1332DD0689D00A72418 /* CompatibilitySettingsView.swift */,
-				C63ED1352DD068C500A72418 /* NormalizationSettingsView.swift */,
-				C63ED1372DD068EF00A72418 /* PaddingSilenceSettingsView.swift */,
-				C63ED1392DD0692200A72418 /* NormalizeSettingsView.swift */,
-				C63ED13B2DD0695500A72418 /* SilenceSettingsView.swift */,
-				C63ED13D2DD0698500A72418 /* VolumeNormalizationView.swift */,
-				C63ED13F2DD069B500A72418 /* SilencePaddingView.swift */,
-				C63ED1412DD069E100A72418 /* SampleRateView.swift */,
-				C63ED1432DD06A0A00A72418 /* BitDepthPicker.swift */,
-				C63ED1452DD06A3700A72418 /* FormatTargetOptions.swift */,
-				C63ED1472DD06A5E00A72418 /* HelpToggleView.swift */,
-				C63ED1492DD06A8C00A72418 /* SamplerWarningView.swift */,
-				C63ED14B2DD06AB400A72418 /* SampleInfoRow.swift */,
-				C63ED14D2DD06AE900A72418 /* FileDropZone.swift */,
-				C63ED14F2DD06B1400A72418 /* FileDropZone_Previews.swift */,
-				C63ED1512DD06B3E00A72418 /* AppDelegate.swift */,
-				C6C894092DD2F00300F9C42F /* CompatibilityCheckResult.swift */,
-				C63ED1052DD05FE000A72418 /* WavPreviewPlayer.swift */,
-				C63ED1072DD0611700A72418 /* WavVisualizer..swift */,
-				C63ED1092DD0614B00A72418 /* WavPlayer.swift */,
-				C63ED1032DD05F2200A72418 /* AudioPlaybackView.swift */,
-				C63ED0D42DD051F500A72418 /* AppSettings.swift */,
-				C63ED1632DD06DA000A72418 /* SampleInfo.swift */,
-				C63ED1652DD06DCB00A72418 /* ProcessingOptions.swift */,
-				C63ED1672DD06E0D00A72418 /* WaveformUtils.swift */,
-				C63ED1612DD06D3600A72418 /* FileConversionTask.swift */,
-				C63ED0CD2DD050F900A72418 /* NormalizationUtils.swift */,
-				C63ED0B82DD04CF200A72418 /* AkaiSampler.swift */,
-				C63ED0BA2DD04D4500A72418 /* OutputDestination.swift */,
-				C63ED0BC2DD04E3400A72418 /* AudioProcessingOptions.swift */,
-				C6C8940B2DD2F0F900F9C42F /* LoadedSample.swift */,
-				C6C8940F2DD2F19C00F9C42F /* AudioExportFormat.swift */,
-				C63ED0B32DD04BFD00A72418 /* FormatChecker.swift */,
-				C63ED0B52DD04C2B00A72418 /* SamplerModel.swift */,
-				C6CE0FEC2DCDAB530028F722 /* AkaiProcessor.swift */,
-				C63ED0962DD0416500A72418 /* AkaiConversionManager.swift */,
-				C63ED0982DD041A500A72418 /* SamplerSettings.swift */,
-				C63ED09A2DD041DD00A72418 /* AudioCompatibilityChecker.swift */,
-				C63ED09C2DD0420900A72418 /* AudioNormalizer.swift */,
-				C63ED0C12DD04F8100A72418 /* AudioSilenceTrimmer.swift */,
-				C63ED0C32DD04FBD00A72418 /* AudioPreviewPlayer.swift */,
-				C63ED17A2DD0724F00A72418 /* OutputDiskWriter.swift */,
-				C63ED17C2DD072BA00A72418 /* CompatibilityAnalyzer.swift */,
-				C63ED17E2DD0732A00A72418 /* SamplePreviewPlayer.swift */,
-				C63ED1802DD0738600A72418 /* DragDropHandler.swift */,
-				C63ED1822DD073D600A72418 /* StatusOverlayView.swift */,
-				C63ED0C52DD04FFB00A72418 /* SampleConversionUtils.swift */,
-				C63ED0C72DD0503E00A72418 /* FileNamingUtils.swift */,
-				C63ED0A02DD042C700A72418 /* SilenceTrimmer.swift */,
-				C63ED0D82DD0562E00A72418 /* WaveformAnalyzer.swift */,
-				C63ED0DA2DD0568400A72418 /* CompatibilityFixer.swift */,
-				C63ED0A52DD0435E00A72418 /* CompatibilityChecker.swift */,
-				C63ED18A2DD0758800A72418 /* TrimUtility.swift */,
-				C63ED18C2DD075D800A72418 /* SampleCompatibilityChecker.swift */,
-				C63ED18E2DD0761E00A72418 /* AudioConversionSettings.swift */,
-				C63ED1902DD0767800A72418 /* FileCompatibilityResult.swift */,
-				C63ED1922DD076B700A72418 /* SamplerDefaults.swift */,
-				C63ED0A72DD0438C00A72418 /* SamplerOptions.swift */,
-				C63ED0A92DD043C600A72418 /* AppState.swift */,
-				C63ED0AB2DD043EC00A72418 /* ExportPreferences.swift */,
-				C63ED0AD2DD0441200A72418 /* SamplerTarget.swift */,
-				C63ED0AF2DD0444700A72418 /* ConversionSettings.swift */,
-				C63ED0B12DD0447C00A72418 /* AudioUtils.swift */,
-				C63ED0A22DD042FA00A72418 /* SampleNormalizer.swift */,
-				C63ED09E2DD0424700A72418 /* SamplerCompatibilityChecker.swift */,
-				C63ED1952DD0783800A72418 /* SamplerAnalysisResult.swift */,
-				C63ED1972DD0787700A72418 /* ConversionOption.swift */,
-				C63ED1992DD078C100A72418 /* ConversionPreferences.swift */,
-				C63ED1772DD0718B00A72418 /* AudioTrimmer.swift */,
-				C63ED0EF2DD05BF300A72418 /* SamplerOutputOption.swift */,
-				C63ED0F12DD05C3B00A72418 /* SamplerSettingsViewModel.swift */,
-				C63ED0F82DD05D6100A72418 /* FileSettingsViewModel.swift */,
-				C63ED0FA2DD05DA400A72418 /* ProgressViewModel.swift */,
-				C63ED0FC2DD05DEE00A72418 /* SettingsManager.swift */,
-				C63ED0FE2DD05E2800A72418 /* View+Extensions.swift */,
-				C63ED0F32DD05C8000A72418 /* OutputSettingsView.swift */,
-				C63ED0F52DD05CCC00A72418 /* ProcessingOptionsView.swift */,
-				C63ED0E02DD0578500A72418 /* AudioConverter.swift */,
-				C63ED0EA2DD05AF500A72418 /* AudioValidation.swift */,
-				C63ED0EC2DD05B4F00A72418 /* AudioUtility.swift */,
-				C63ED0E22DD057AE00A72418 /* SamplerCompatibility.swift */,
-				C63ED19C2DD079BC00A72418 /* AudioInfo.swift */,
-				C63ED0DD2DD0570000A72418 /* UserPreferences.swift */,
-				C6CE0FED2DCDAB530028F722 /* AkaiUtilGUIApp.swift */,
-				C6CE0FEE2DCDAB530028F722 /* ContentView.swift */,
-			);
-			path = Swift;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -931,143 +668,54 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C63ED1402DD069B800A72418 /* SilencePaddingView.swift in Sources */,
-				C679CBAE2DCDB26A001EA86B /* akaiutil_io.c in Sources */,
-				C63ED13C2DD0695700A72418 /* SilenceSettingsView.swift in Sources */,
-				C63ED1552DD06BAA00A72418 /* SamplerSettingsView.swift in Sources */,
-				C6DD189A2DD5B1C800738CC4 /* DummyBridge.m in Sources */,
-				C63ED0F92DD05D6300A72418 /* FileSettingsViewModel.swift in Sources */,
-				C679CBAF2DCDB26A001EA86B /* akaiutil_file.c in Sources */,
-				C63ED0972DD0416A00A72418 /* AkaiConversionManager.swift in Sources */,
-				C63ED1162DD063EF00A72418 /* TrimOptions.swift in Sources */,
-				C63ED0AA2DD043C800A72418 /* AppState.swift in Sources */,
-				C63ED1182DD0642500A72418 /* AppPreferences.swift in Sources */,
-				C63ED1882DD074BB00A72418 /* ProcessingStatus.swift in Sources */,
-				C63ED0BD2DD04E3600A72418 /* AudioProcessingOptions.swift in Sources */,
-				C63ED1832DD073D800A72418 /* StatusOverlayView.swift in Sources */,
-				C63ED1962DD0783A00A72418 /* SamplerAnalysisResult.swift in Sources */,
-				C679CBB02DCDB26A001EA86B /* akaiutil.c in Sources */,
-				C63ED0BB2DD04D4600A72418 /* OutputDestination.swift in Sources */,
-				C63ED1642DD06DA300A72418 /* SampleInfo.swift in Sources */,
-				C63ED0FD2DD05DF000A72418 /* SettingsManager.swift in Sources */,
-				C63ED1142DD0636700A72418 /* SystemVolumeManager.swift in Sources */,
-				C679CBB12DCDB26A001EA86B /* akaiutil_main.c in Sources */,
-				C63ED15D2DD06C6C00A72418 /* MonoConversionSettings.swift in Sources */,
-				C63ED1682DD06E0F00A72418 /* WaveformUtils.swift in Sources */,
-				C63ED0D92DD0563000A72418 /* WaveformAnalyzer.swift in Sources */,
-				C63ED0E12DD0578600A72418 /* AudioConverter.swift in Sources */,
-				C63ED1912DD0767A00A72418 /* FileCompatibilityResult.swift in Sources */,
-				C63ED0F22DD05C3D00A72418 /* SamplerSettingsViewModel.swift in Sources */,
-				C63ED16B2DD06F1300A72418 /* FileDropView.swift in Sources */,
-				C6C894102DD2F1A000F9C42F /* AudioExportFormat.swift in Sources */,
-				C63ED19D2DD079C000A72418 /* AudioInfo.swift in Sources */,
-				C63ED1222DD0663200A72418 /* DragDropController.swift in Sources */,
-				C63ED09D2DD0420B00A72418 /* AudioNormalizer.swift in Sources */,
-				C63ED0992DD041AA00A72418 /* SamplerSettings.swift in Sources */,
-				C63ED1122DD0633600A72418 /* SoundPreviewPlayer.swift in Sources */,
-				C63ED1102DD0630B00A72418 /* SamplerOutputTarget.swift in Sources */,
-				C63ED1932DD076B800A72418 /* SamplerDefaults.swift in Sources */,
-				C63ED1262DD066D500A72418 /* ProcessingProgress.swift in Sources */,
-				C63ED0F02DD05C0000A72418 /* SamplerOutputOption.swift in Sources */,
-				C63ED0AC2DD043EE00A72418 /* ExportPreferences.swift in Sources */,
-				C63ED0DE2DD0570400A72418 /* UserPreferences.swift in Sources */,
-				C63ED13A2DD0692300A72418 /* NormalizeSettingsView.swift in Sources */,
-				C63ED1982DD0787900A72418 /* ConversionOption.swift in Sources */,
-				C63ED1042DD05F2300A72418 /* AudioPlaybackView.swift in Sources */,
-				C63ED09F2DD0424A00A72418 /* SamplerCompatibilityChecker.swift in Sources */,
-				C63ED0F42DD05C8200A72418 /* OutputSettingsView.swift in Sources */,
-				C63ED1712DD06FAF00A72418 /* ConversionOptions.swift in Sources */,
-				C63ED1422DD069E200A72418 /* SampleRateView.swift in Sources */,
-				C63ED0A62DD0436000A72418 /* CompatibilityChecker.swift in Sources */,
-				C679CBB22DCDB26A001EA86B /* commonlib.c in Sources */,
-				C63ED0CE2DD050FB00A72418 /* NormalizationUtils.swift in Sources */,
-				C6C8940A2DD2F00800F9C42F /* CompatibilityCheckResult.swift in Sources */,
-				C63ED12A2DD0677200A72418 /* SamplerSelectionView.swift in Sources */,
-				C63ED08F2DD034C600A72418 /* akaiutil_check.c in Sources */,
-				C63ED0D52DD051F600A72418 /* AppSettings.swift in Sources */,
-				C63ED1E92DD192BA00A72418 /* FileExportOptions.swift in Sources */,
-				C63ED0CC2DD050B200A72418 /* SilenceUtils.swift in Sources */,
-				C63ED1462DD06A3800A72418 /* FormatTargetOptions.swift in Sources */,
-				C63ED0C22DD04F8400A72418 /* AudioSilenceTrimmer.swift in Sources */,
-				C63ED1362DD068C600A72418 /* NormalizationSettingsView.swift in Sources */,
-				C63ED0F62DD05CD100A72418 /* ProcessingOptionsView.swift in Sources */,
-				C63ED09B2DD041E100A72418 /* AudioCompatibilityChecker.swift in Sources */,
-				C63ED1442DD06A0C00A72418 /* BitDepthPicker.swift in Sources */,
-				C63ED0DB2DD0568600A72418 /* CompatibilityFixer.swift in Sources */,
-				C63ED0C62DD04FFD00A72418 /* SampleConversionUtils.swift in Sources */,
-				C63ED1062DD05FE100A72418 /* WavPreviewPlayer.swift in Sources */,
-				C63ED0B02DD0444900A72418 /* ConversionSettings.swift in Sources */,
-				C63ED1022DD05ECF00A72418 /* WaveformPreview.swift in Sources */,
-				C63ED10A2DD0614E00A72418 /* WavPlayer.swift in Sources */,
-				C63ED1732DD06FDF00A72418 /* AppConstants.swift in Sources */,
-				C679CBB32DCDB26A001EA86B /* akaiutil_take.c in Sources */,
-				C63ED0B62DD04C2D00A72418 /* SamplerModel.swift in Sources */,
-				C6C8940C2DD2F0FD00F9C42F /* LoadedSample.swift in Sources */,
-				C63ED1E72DD1928700A72418 /* AudioWarnings.swift in Sources */,
-				C63ED0ED2DD05B5300A72418 /* AudioUtility.swift in Sources */,
-				C6C894162DD4368F00F9C42F /* WAVHeader.swift in Sources */,
-				C63ED0FB2DD05DA500A72418 /* ProgressViewModel.swift in Sources */,
-				C679CBB42DCDB26A001EA86B /* akaiutil_tar.c in Sources */,
-				C63ED0B92DD04CF500A72418 /* AkaiSampler.swift in Sources */,
-				C63ED1202DD065E700A72418 /* DragDropView.swift in Sources */,
-				C63ED0922DD0375100A72418 /* akaiutil_audioutils.c in Sources */,
-				C63ED1522DD06B4000A72418 /* AppDelegate.swift in Sources */,
-				C63ED0C42DD04FBF00A72418 /* AudioPreviewPlayer.swift in Sources */,
-				C63ED12E2DD067E100A72418 /* MonoConversionToggle.swift in Sources */,
-				C63ED14E2DD06AEB00A72418 /* FileDropZone.swift in Sources */,
-				C63ED13E2DD0698700A72418 /* VolumeNormalizationView.swift in Sources */,
-				C63ED0B42DD04C0000A72418 /* FormatChecker.swift in Sources */,
-				C63ED1572DD06BDA00A72418 /* CompatibilityCheckResultView.swift in Sources */,
-				C63ED0EB2DD05AF600A72418 /* AudioValidation.swift in Sources */,
-				C63ED10E2DD062B800A72418 /* OutputPathHelper.swift in Sources */,
-				C63ED1812DD0738800A72418 /* DragDropHandler.swift in Sources */,
-				C63ED1482DD06A5F00A72418 /* HelpToggleView.swift in Sources */,
-				C63ED0D32DD051B400A72418 /* WaveformView.swift in Sources */,
-				C63ED15B2DD06C3F00A72418 /* FileListRow.swift in Sources */,
-				C63ED08D2DD0347C00A72418 /* akaiutil_trim.c in Sources */,
-				C63ED11A2DD0645500A72418 /* SampleProcessingTask.swift in Sources */,
-				C63ED17F2DD0732B00A72418 /* SamplePreviewPlayer.swift in Sources */,
-				C63ED17D2DD072BC00A72418 /* CompatibilityAnalyzer.swift in Sources */,
-				C63ED11E2DD0650000A72418 /* TaskRunner.swift in Sources */,
-				C63ED18B2DD0758A00A72418 /* TrimUtility.swift in Sources */,
-				C63ED1282DD0673800A72418 /* SamplingSettings.swift in Sources */,
-				C63ED0A82DD0438E00A72418 /* SamplerOptions.swift in Sources */,
-				C63ED1082DD0611900A72418 /* WavVisualizer..swift in Sources */,
-				C63ED1342DD0689E00A72418 /* CompatibilitySettingsView.swift in Sources */,
-				C63ED1662DD06DCE00A72418 /* ProcessingOptions.swift in Sources */,
-				C63ED0A32DD042FC00A72418 /* SampleNormalizer.swift in Sources */,
-				C63ED1592DD06C0C00A72418 /* ProgressBar.swift in Sources */,
-				C679CBB52DCDB26A001EA86B /* akaiutil_wav.c in Sources */,
-				C63ED14C2DD06AB500A72418 /* SampleInfoRow.swift in Sources */,
-				C63ED0FF2DD05E2B00A72418 /* View+Extensions.swift in Sources */,
-				C63ED0AE2DD0441400A72418 /* SamplerTarget.swift in Sources */,
-				C6C894142DD36DB100F9C42F /* WavWriter.swift in Sources */,
-				C63ED1322DD0685F00A72418 /* ConversionBehaviorSettingsView.swift in Sources */,
-				C63ED17B2DD0725100A72418 /* OutputDiskWriter.swift in Sources */,
-				C63ED11C2DD064B200A72418 /* SampleTaskQueue.swift in Sources */,
-				C63ED1502DD06B1600A72418 /* FileDropZone_Previews.swift in Sources */,
-				C63ED18F2DD0762000A72418 /* AudioConversionSettings.swift in Sources */,
-				C6CE0FF02DCDAB530028F722 /* AkaiProcessor.swift in Sources */,
-				C63ED12C2DD067B200A72418 /* TrimOptionsView.swift in Sources */,
-				C63ED0E32DD057B000A72418 /* SamplerCompatibility.swift in Sources */,
-				C63ED1302DD0682900A72418 /* OutputFormatSettingsView.swift in Sources */,
-				C63ED1382DD068F100A72418 /* PaddingSilenceSettingsView.swift in Sources */,
-				C63ED1242DD0667D00A72418 /* OutputPathSelector.swift in Sources */,
-				C63ED0D12DD0518900A72418 /* PreviewUtils.swift in Sources */,
-				C63ED15F2DD06CBB00A72418 /* PreviewPlayback.swift in Sources */,
-				C63ED16F2DD06F7D00A72418 /* ToggleOption.swift in Sources */,
-				C63ED16D2DD06F5000A72418 /* StatusIndicatorView.swift in Sources */,
-				C6CE0FF12DCDAB530028F722 /* ContentView.swift in Sources */,
-				C63ED0A12DD042C900A72418 /* SilenceTrimmer.swift in Sources */,
-				C63ED1752DD0701B00A72418 /* FileValidation.swift in Sources */,
-				C63ED0B22DD0447E00A72418 /* AudioUtils.swift in Sources */,
-				C6CE0FF32DCDAB530028F722 /* AkaiUtilGUIApp.swift in Sources */,
-				C63ED1782DD0718C00A72418 /* AudioTrimmer.swift in Sources */,
-				C63ED18D2DD075DA00A72418 /* SampleCompatibilityChecker.swift in Sources */,
-				C63ED14A2DD06A8E00A72418 /* SamplerWarningView.swift in Sources */,
-				C63ED0C82DD0504000A72418 /* FileNamingUtils.swift in Sources */,
-				C63ED19A2DD078C200A72418 /* ConversionPreferences.swift in Sources */,
-				C63ED1622DD06D3900A72418 /* FileConversionTask.swift in Sources */,
+				C6206FC22DD7C075002C1C9C /* akaiutil_take.c in Sources */,
+				C6206FC32DD7C075002C1C9C /* akaiutil_main.c in Sources */,
+				C6206FC42DD7C075002C1C9C /* akaiutil_trim.c in Sources */,
+				C6206FC52DD7C075002C1C9C /* commonlib.c in Sources */,
+				C6206FC62DD7C075002C1C9C /* akaiutil_io.c in Sources */,
+				C6206FC72DD7C075002C1C9C /* akaiutil_wav.c in Sources */,
+				C638B9852DD83FE1000E4B43 /* ExportPreferences.swift in Sources */,
+				C6206FC82DD7C075002C1C9C /* akaiutil_check.c in Sources */,
+				C6206FC92DD7C075002C1C9C /* akaiutil_tar.c in Sources */,
+				C6206FCA2DD7C075002C1C9C /* akaiutil_audioutils.c in Sources */,
+				C6206FCB2DD7C075002C1C9C /* akaiutil_file.c in Sources */,
+				C6206FCC2DD7C075002C1C9C /* akaiutil.c in Sources */,
+				C62070352DD7C0E9002C1C9C /* SilenceSettingsView.swift in Sources */,
+				C62070362DD7C0E9002C1C9C /* SoundPreviewPlayer.swift in Sources */,
+				C62070372DD7C0E9002C1C9C /* SamplerSettingsView.swift in Sources */,
+				C62070382DD7C0E9002C1C9C /* StatusOverlayView.swift in Sources */,
+				C62070392DD7C0E9002C1C9C /* SamplerTarget.swift in Sources */,
+				C620703A2DD7C0E9002C1C9C /* SamplerType.swift in Sources */,
+				C620703B2DD7C0E9002C1C9C /* WavPlayer.swift in Sources */,
+				C620703C2DD7C0E9002C1C9C /* View+Extensions.swift in Sources */,
+				C620703D2DD7C0E9002C1C9C /* SampleTaskQueue.swift in Sources */,
+				C620703E2DD7C0E9002C1C9C /* TrimOptions.swift in Sources */,
+				C638B9822DD83F3C000E4B43 /* SampleProcessingTask.swift in Sources */,
+				C638B9832DD83F3C000E4B43 /* AkaiSampleTask.swift in Sources */,
+				C620703F2DD7C0E9002C1C9C /* ToggleOption.swift in Sources */,
+				C62070402DD7C0E9002C1C9C /* WaveformPreview.swift in Sources */,
+				C62070412DD7C0E9002C1C9C /* SilencePaddingView.swift in Sources */,
+				C62070422DD7C0E9002C1C9C /* WavPreviewPlayer.swift in Sources */,
+				C62070432DD7C0E9002C1C9C /* VolumeNormalizationView.swift in Sources */,
+				C62070442DD7C0E9002C1C9C /* WAVHeader.swift in Sources */,
+				C62070452DD7C0E9002C1C9C /* WavVisualizer..swift in Sources */,
+				C62070462DD7C0E9002C1C9C /* WaveformUtils.swift in Sources */,
+				C62070472DD7C0E9002C1C9C /* WavWriter.swift in Sources */,
+				C62070482DD7C0E9002C1C9C /* SilenceUtils.swift in Sources */,
+				C62070492DD7C0E9002C1C9C /* WaveformView.swift in Sources */,
+				C620704A2DD7C0E9002C1C9C /* SamplerWarningView.swift in Sources */,
+				C620704B2DD7C0E9002C1C9C /* WaveformAnalyzer.swift in Sources */,
+				C620704C2DD7C0E9002C1C9C /* TrimOptionsView.swift in Sources */,
+				C620704D2DD7C0E9002C1C9C /* SettingsManager.swift in Sources */,
+				C620704E2DD7C0E9002C1C9C /* SamplingSettings.swift in Sources */,
+				C620704F2DD7C0E9002C1C9C /* StatusIndicatorView.swift in Sources */,
+				C62070502DD7C0E9002C1C9C /* SilenceTrimmer.swift in Sources */,
+				C62070512DD7C0E9002C1C9C /* TaskRunner.swift in Sources */,
+				C62070522DD7C0E9002C1C9C /* SamplerSettingsViewModel.swift in Sources */,
+				C62070532DD7C0E9002C1C9C /* TrimUtility.swift in Sources */,
+				C62070542DD7C0E9002C1C9C /* SystemVolumeManager.swift in Sources */,
+				C62070552DD7C0E9002C1C9C /* SamplerSettings.swift in Sources */,
+				C62070562DD7C0E9002C1C9C /* UserPreferences.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1253,7 +901,7 @@
 				REGISTER_APP_GROUPS = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/AkaiSConvert $(SRCROOT)/**";
-				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "C/Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -1292,7 +940,7 @@
 				REGISTER_APP_GROUPS = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/AkaiSConvert $(SRCROOT)/**";
-				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "C/Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
