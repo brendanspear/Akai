@@ -1,109 +1,139 @@
 //
-//  This file is part of AkaiSConvert.
+//  akaiutil_audioutils.c
+//  AkaiSConvert
+//
 //  Based on original work: akaiutil by Klaus Michael Indlekofer
-//  Copyright (C) 2008-2025 Klaus Michael Indlekofer <m.indlekofer@gmx.de>
+//  Copyright (C) 2008–2025 Klaus Michael Indlekofer <m.indlekofer@gmx.de>
+//  Updated by Brendan Spear under GNU GPL v3.0
 //  Released under GNU GPL v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 //
 
-#include "akaiutil_audioutils.h"
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
 
-// Normalize to full 16-bit range
-void normalize_pcm16(int16_t *samples, size_t count) {
+#include "sample.h"
+#include "akai_model.h"
+#include "akaiutil_audioutils.h"
+
+bool normalize_pcm16_internal(int16_t* data, size_t length) {
+    if (!data || length == 0) return false;
+
     int16_t max_val = 0;
-    for (size_t i = 0; i < count; ++i) {
-        if (abs(samples[i]) > max_val) {
-            max_val = abs(samples[i]);
+    for (size_t i = 0; i < length; ++i) {
+        int16_t abs_val = abs(data[i]);
+        if (abs_val > max_val) {
+            max_val = abs_val;
         }
     }
 
-    if (max_val == 0) return;
+    if (max_val == 0) return true; // Already silent
 
-    float gain = 32767.0f / max_val;
-    for (size_t i = 0; i < count; ++i) {
-        samples[i] = (int16_t)(samples[i] * gain);
+    float scale = 32767.0f / max_val;
+    for (size_t i = 0; i < length; ++i) {
+        data[i] = (int16_t)(data[i] * scale);
     }
+
+    return true;
 }
 
-// Trim silence using threshold
-int16_t *trim_silence_pcm16(const int16_t *samples, size_t count, size_t *new_count, int16_t threshold) {
+bool trim_silence_pcm16_internal(int16_t* data, size_t* length) {
+    if (!data || !length || *length == 0) return false;
+
+    const int threshold = 100;
     size_t start = 0;
-    while (start < count && abs(samples[start]) <= threshold) {
-        start++;
-    }
+    size_t end = *length - 1;
 
-    size_t end = count;
-    while (end > start && abs(samples[end - 1]) <= threshold) {
-        end--;
-    }
+    while (start < *length && abs(data[start]) < threshold) start++;
+    while (end > start && abs(data[end]) < threshold) end--;
 
-    *new_count = end - start;
-    int16_t *trimmed = malloc(*new_count * sizeof(int16_t));
-    if (!trimmed) return NULL;
+    size_t new_len = end - start + 1;
+    if (new_len == 0) return false;
 
-    memcpy(trimmed, &samples[start], *new_count * sizeof(int16_t));
-    return trimmed;
+    memmove(data, data + start, new_len * sizeof(int16_t));
+    *length = new_len;
+
+    return true;
 }
 
-// Pad silence at end
-int16_t *pad_silence_end_pcm16(const int16_t *samples, size_t count, size_t pad_ms, uint32_t sample_rate, size_t *new_count) {
-    size_t pad_samples = (pad_ms * sample_rate) / 1000;
-    *new_count = count + pad_samples;
+bool pad_silence_end_pcm16_internal(sample_t* sample, int milliseconds) {
+    if (!sample || sample->rate == 0) return false;
 
-    int16_t *padded = malloc(*new_count * sizeof(int16_t));
-    if (!padded) return NULL;
+    size_t pad_samples = (milliseconds * sample->rate) / 1000;
+    size_t new_len = sample->length + pad_samples;
 
-    memcpy(padded, samples, count * sizeof(int16_t));
-    memset(padded + count, 0, pad_samples * sizeof(int16_t));
+    int16_t* new_data = realloc(sample->data, new_len * sizeof(int16_t));
+    if (!new_data) return false;
 
-    return padded;
+    memset(new_data + sample->length, 0, pad_samples * sizeof(int16_t));
+
+    sample->data = new_data;
+    sample->length = new_len;
+
+    return true;
 }
 
-// Akai compatibility checker
-bool is_sample_compatible(uint32_t sample_rate, uint16_t bit_depth, uint8_t channels, const char *model) {
-    if (strcmp(model, "S900") == 0) {
-        return sample_rate <= 40000 && bit_depth == 12 && channels == 1;
-    } else if (strcmp(model, "S1000") == 0) {
-        return sample_rate <= 44100 && bit_depth == 16 && channels <= 2;
-    } else if (strcmp(model, "S3000") == 0) {
-        return sample_rate <= 48000 && bit_depth == 16 && channels <= 2;
-    }
-    return false;
-}
+bool adjust_to_akai_compatibility_internal(sample_t* sample, AkaiModel model) {
+    if (!sample) return false;
 
-// Adjust sample for Akai compatibility (mono + 44.1kHz resample + convert to 16-bit)
-int16_t *adjust_to_akai_compatibility(const int16_t *input, size_t in_count, uint32_t in_rate,
-                                      uint8_t in_channels, size_t *out_count,
-                                      uint32_t *out_rate, uint8_t *out_channels, const char *model) {
-    *out_count = in_count;
-    *out_rate = in_rate;
-    *out_channels = in_channels;
+    if (model == AKAI_MODEL_S900 && sample->channels > 1) {
+        size_t mono_len = sample->length / sample->channels;
+        int16_t* mono_data = malloc(mono_len * sizeof(int16_t));
+        if (!mono_data) return false;
 
-    // Force mono if S900
-    int16_t *intermediate = NULL;
-    if (strcmp(model, "S900") == 0 && in_channels > 1) {
-        *out_channels = 1;
-        *out_count = in_count / in_channels;
-
-        intermediate = malloc(*out_count * sizeof(int16_t));
-        if (!intermediate) return NULL;
-
-        for (size_t i = 0; i < *out_count; ++i) {
+        for (size_t i = 0; i < mono_len; ++i) {
             int32_t sum = 0;
-            for (uint8_t c = 0; c < in_channels; ++c) {
-                sum += input[i * in_channels + c];
+            for (uint8_t c = 0; c < sample->channels; ++c) {
+                sum += ((int16_t*)sample->data)[i * sample->channels + c];
             }
-            intermediate[i] = (int16_t)(sum / in_channels);
+            mono_data[i] = (int16_t)(sum / sample->channels);
         }
-    } else {
-        intermediate = malloc(in_count * sizeof(int16_t));
-        if (!intermediate) return NULL;
-        memcpy(intermediate, input, in_count * sizeof(int16_t));
+
+        free(sample->data);
+        sample->data = mono_data;
+        sample->length = mono_len;
+        sample->channels = 1;
     }
 
-    // TODO: Add optional resampling in v2 if needed
+    return true;
+}
 
-    return intermediate;
+bool convert_to_mono_pcm16(sample_t* sample) {
+    if (!sample || sample->channels <= 1) return false;
+
+    size_t mono_len = sample->length;
+    int16_t* mono_data = malloc(mono_len * sizeof(int16_t));
+    if (!mono_data) return false;
+
+    for (size_t i = 0; i < mono_len; ++i) {
+        int32_t sum = 0;
+        for (int c = 0; c < sample->channels; ++c) {
+            sum += ((int16_t*)sample->data)[i * sample->channels + c];
+        }
+        mono_data[i] = (int16_t)(sum / sample->channels);
+    }
+
+    free(sample->data);
+    sample->data = mono_data;
+    sample->channels = 1;
+
+    return true;
+}
+// Public wrappers to expose internal functions via header
+
+bool normalize_pcm16(sample_t* sample) {
+    if (!sample || !sample->data || sample->length == 0) return false;
+    return normalize_pcm16_internal(sample->data, sample->length);
+}
+
+bool trim_silence_pcm16(sample_t* sample) {
+    if (!sample || !sample->data || sample->length == 0) return false;
+    return trim_silence_pcm16_internal(sample->data, &sample->length);
+}
+
+bool pad_silence_end_pcm16(sample_t* sample, int milliseconds) {
+    return pad_silence_end_pcm16_internal(sample, milliseconds);
 }

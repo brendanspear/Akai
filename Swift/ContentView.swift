@@ -2,82 +2,108 @@
 //  ContentView.swift
 //  AkaiSConvert
 //
-//  Created by Brendan Spear on 5/17/25.
+//  Created by Brendan Spear on 2025-05-15.
 //
 
 import SwiftUI
 
 struct ContentView: View {
-    @State private var selectedFileURL: URL?
-    @State private var selectedSampler = "S900/950"
-    @State private var convertToMono = true
-    @State private var normalize = false
-    @State private var trimSilence = true
-    @State private var addSilence = false
-    @State private var silenceDuration = 0
-    @State private var autoFix = true
-    @State private var outputFolderURL: URL?
-
-    let samplers = ["S900/950", "S1000/S1100", "S3000/S3200"]
+    @ObservedObject var viewModel = ConversionViewModel()
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
-            Text("Akai Sample Converter")
-                .font(.title)
-                .padding(.top)
+        VStack(spacing: 20) {
 
-            FileDropView(fileURL: $selectedFileURL)
+            VStack {
+                RoundedRectangle(cornerRadius: 8)
+                    .stroke(style: StrokeStyle(lineWidth: 2, dash: [8]))
+                    .background(Color.clear)
+                    .frame(height: 100)
+                    .overlay(
+                        VStack(spacing: 5) {
+                            Text("Drag and drop files or folders here")
+                                .foregroundColor(.gray)
+                            Text("or click anywhere to select")
+                                .font(.callout)
+                                .foregroundColor(.blue)
+                        }
+                    )
+                    .contentShape(Rectangle())
+                    .onTapGesture {
+                        viewModel.selectInputFiles()
+                    }
+                    .onDrop(of: [.fileURL], isTargeted: nil) { providers in
+                        viewModel.handleDroppedItems(providers: providers)
+                        return true
+                    }
+            }
+            .padding(.horizontal)
 
-            Picker("Sampler", selection: $selectedSampler) {
-                ForEach(samplers, id: \.self) { sampler in
-                    Text(sampler)
+            if !viewModel.inputFiles.isEmpty {
+                VStack(alignment: .leading) {
+                    WaveformPreviewView(
+                        files: viewModel.inputFiles,
+                        statuses: viewModel.fileStatuses,
+                        metadata: viewModel.metadata,
+                        removeAction: viewModel.removeFile
+                    )
+                    .padding(.bottom, 10)
+                }
+                .padding(.horizontal)
+            }
+
+            SamplerSettingsView(viewModel: SamplerSettingsViewModel(settings: $viewModel.settings))
+                .padding(.horizontal)
+
+            VStack(alignment: .leading, spacing: 6) {
+                HStack(spacing: 12) {
+                    Button("Select Output Folder") {
+                        viewModel.selectOutputFolder()
+                    }
+
+                    Button("Reset") {
+                        viewModel.inputFiles = []
+                        viewModel.settings = .defaultSettings()
+                        viewModel.fileStatuses.removeAll()
+                        viewModel.metadata.removeAll()
+                    }
+                    .foregroundColor(.red)
+                }
+
+                if let outputURL = viewModel.settings.outputFolderURL {
+                    Text(outputURL.path)
+                        .font(.caption)
+                        .lineLimit(1)
+                        .truncationMode(.middle)
+                        .foregroundColor(.gray)
                 }
             }
-            .pickerStyle(MenuPickerStyle())
+            .padding(.horizontal)
 
-            Toggle("Convert to mono", isOn: $convertToMono)
-            Toggle("Normalize", isOn: $normalize)
-            Toggle("Trim silence", isOn: $trimSilence)
-            Toggle("Pad silence", isOn: $addSilence)
-
-            HStack {
-                Text("Silence Duration (ms):")
-                TextField("0", value: $silenceDuration, formatter: NumberFormatter())
-                    .frame(width: 80)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-            }
-
-            Toggle("Auto-fix", isOn: $autoFix)
-
-            HStack {
-                Text("Output:")
-                Spacer()
-                Button("Choose...") {
-                    let panel = NSOpenPanel()
-                    panel.canChooseDirectories = true
-                    panel.canChooseFiles = false
-                    if panel.runModal() == .OK {
-                        outputFolderURL = panel.url
+            Button(action: {
+                if viewModel.promptForOutputFolderIfNeeded() {
+                    for file in viewModel.inputFiles {
+                        TaskRunner.runInBackground {
+                            _ = SampleConverter.convert(
+                                inputURL: file,
+                                settings: viewModel.settings
+                            )
+                        }
                     }
                 }
+            }) {
+                Text("Convert Samples")
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
             }
-
-            Button("Convert") {
-                // conversion logic placeholder
-            }
-            .padding()
-            .frame(maxWidth: .infinity)
-            .background(Color.blue)
-            .foregroundColor(.white)
-            .cornerRadius(8)
+            .buttonStyle(PlainButtonStyle())
+            .padding(.horizontal)
 
             Spacer()
         }
         .padding()
-        .frame(width: 400)
+        .frame(minWidth: 600, minHeight: 700)
     }
-}
-
-#Preview {
-    ContentView()
 }

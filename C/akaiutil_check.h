@@ -1,4 +1,7 @@
 //
+//  akaiutil_check.h
+//  AkaiSConvert
+//
 //  This file is part of AkaiSConvert.
 //  Based on original work: akaiutil by Klaus Michael Indlekofer
 //  Copyright (C) 2008-2025 Klaus Michael Indlekofer <m.indlekofer@gmx.de>
@@ -8,24 +11,22 @@
 #ifndef AKAIUTIL_CHECK_H
 #define AKAIUTIL_CHECK_H
 
+#include <stdbool.h>
+#include "sample.h"
+#include "akai_model.h"
+
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-#include <stdint.h>
-#include <stddef.h>
+int akai_check_compatibility_s900(const sample_t* sample);
+int akai_check_compatibility_s1000(const sample_t* sample);
+int akai_check_compatibility_s3000(const sample_t* sample);
 
-// Check if PCM audio is compatible with a given Akai sampler model
-// Returns 1 if compatible, 0 otherwise
-int check_compatibility(const int16_t *samples, size_t sample_count, uint32_t sample_rate, uint8_t bit_depth, const char *model);
-
-// Individual checks (used internally or externally as needed)
-int akai_check_compatibility_s900(const int16_t *samples, size_t sample_count, uint32_t sample_rate, uint8_t bit_depth);
-int akai_check_compatibility_s1000(const int16_t *samples, size_t sample_count, uint32_t sample_rate, uint8_t bit_depth);
-int akai_check_compatibility_s3000(const int16_t *samples, size_t sample_count, uint32_t sample_rate, uint8_t bit_depth);
+bool check_akai_compatibility(const sample_t* sample, AkaiModel model);
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif // AKAIUTIL_CHECK_H
+#endif /* AKAIUTIL_CHECK_H */

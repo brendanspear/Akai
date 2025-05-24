@@ -1,14 +1,18 @@
 //
-//  This file is part of AkaiSConvert.
+//  akaiutil_io.c
+//  AkaiSConvert
+//
 //  Based on original work: akaiutil by Klaus Michael Indlekofer
-//  Copyright (C) 2008-2025 Klaus Michael Indlekofer <m.indlekofer@gmx.de>
-//  Released under GNU GPL v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
+//  Adapted and modernized by Brendan Spear
+//  Released under GNU GPL v3.0
 //
 
 #include "akaiutil_io.h"
+#include "akaiutil_tar.h"  // For disk image generation
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "akai_disk.h"
 #include <sndfile.h>  // Requires linking with libsndfile
 
 uint8_t *read_file(const char *filename, size_t *length) {
@@ -90,6 +94,7 @@ void generate_output_filename(const char *input, const char *ext, char *output, 
     strcat(output, ".");
     strcat(output, ext);
 }
+
 // Convert 16-bit PCM samples to 12-bit Akai-style packed format
 int akai_convert_16bit_to_12bit(const int16_t *input, int input_len, uint8_t *output, int output_max_len) {
     if (!input || !output || input_len <= 0 || output_max_len <= 0) return -1;
@@ -118,3 +123,5 @@ int akai_convert_12bit_to_16bit(const uint8_t *input, int input_len, int16_t *ou
 
     return out_index; // number of samples written
 }
+
+

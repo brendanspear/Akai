@@ -1,14 +1,10 @@
-//
-//  SampleProcessingTask.swift
-//  AkaiSConvert
-//
-//  Created by Brendan Spear on 2025-05-XX.
-//
+// SampleProcessingTask.swift
+// AkaiSConvert
+// Copyright © 2024 Brendan Spear. All rights reserved.
 
 import Foundation
 
 struct SampleProcessingTask {
-    let fileURL: URL
     let sampler: SamplerType
-    let options: ExportPreferences
+    let data: Data
 }

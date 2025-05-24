@@ -1,4 +1,7 @@
 //
+//  akaiutil_check.c
+//  AkaiSConvert
+//
 //  This file is part of AkaiSConvert.
 //  Based on original work: akaiutil by Klaus Michael Indlekofer
 //  Copyright (C) 2008-2025 Klaus Michael Indlekofer <m.indlekofer@gmx.de>
@@ -6,43 +9,46 @@
 //
 
 #include "akaiutil_check.h"
+#include "sample.h"
 #include <string.h>
 
 // Internal logic for S900 compatibility
-int akai_check_compatibility_s900(const int16_t *samples, size_t sample_count, uint32_t sample_rate, uint8_t bit_depth) {
-    if (!samples || sample_count == 0) return 0;
-    if (bit_depth != 12) return 0;
-    if (sample_rate > 37500) return 0;  // S900 max ~37.5kHz
+int akai_check_compatibility_s900(const sample_t* sample) {
+    if (!sample || sample->length == 0) return 0;
+    if (sample->bits != 12) return 0;
+    if (sample->rate > 37500) return 0;  // S900 max ~37.5kHz
+    if (sample->channels != 1) return 0;
     return 1;
 }
 
 // Internal logic for S1000 compatibility
-int akai_check_compatibility_s1000(const int16_t *samples, size_t sample_count, uint32_t sample_rate, uint8_t bit_depth) {
-    if (!samples || sample_count == 0) return 0;
-    if (bit_depth != 16) return 0;
-    if (sample_rate > 44100) return 0;  // S1000 max ~44.1kHz
+int akai_check_compatibility_s1000(const sample_t* sample) {
+    if (!sample || sample->length == 0) return 0;
+    if (sample->bits != 16) return 0;
+    if (sample->rate > 44100) return 0;
     return 1;
 }
 
 // Internal logic for S3000 compatibility
-int akai_check_compatibility_s3000(const int16_t *samples, size_t sample_count, uint32_t sample_rate, uint8_t bit_depth) {
-    if (!samples || sample_count == 0) return 0;
-    if (bit_depth != 16) return 0;
-    if (sample_rate > 48000) return 0;  // S3000 max ~48kHz
+int akai_check_compatibility_s3000(const sample_t* sample) {
+    if (!sample || sample->length == 0) return 0;
+    if (sample->bits != 16) return 0;
+    if (sample->rate > 48000) return 0;
     return 1;
 }
 
-// Dispatcher based on model string
-int check_compatibility(const int16_t *samples, size_t sample_count, uint32_t sample_rate, uint8_t bit_depth, const char *model) {
-    if (!model) return 0;
+// Dispatcher based on model
+bool check_akai_compatibility(const sample_t* sample, AkaiModel model) {
+    if (!sample) return false;
 
-    if (strcmp(model, "S900") == 0) {
-        return akai_check_compatibility_s900(samples, sample_count, sample_rate, bit_depth);
-    } else if (strcmp(model, "S1000") == 0) {
-        return akai_check_compatibility_s1000(samples, sample_count, sample_rate, bit_depth);
-    } else if (strcmp(model, "S3000") == 0) {
-        return akai_check_compatibility_s3000(samples, sample_count, sample_rate, bit_depth);
+    switch (model) {
+        case AKAI_MODEL_S900:
+            return akai_check_compatibility_s900(sample);
+        case AKAI_MODEL_S1000:
+            return akai_check_compatibility_s1000(sample);
+        case AKAI_MODEL_S3000:
+            return akai_check_compatibility_s3000(sample);
+        default:
+            return false;
     }
-
-    return 0; // Unknown model
 }

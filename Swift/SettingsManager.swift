@@ -1,32 +1,20 @@
-//
-//  SettingsManager.swift
-//  AkaiSConvert
-//
-//  Created by Brendan Spear on 5/11/25.
-//
+
 import Foundation
 
-class SettingsManager: ObservableObject {
-    static let shared = SettingsManager()
-    
-    @Published var selectedSampler: SamplerType = .s1000
-    @Published var normalizeAudio: Bool = false
-    @Published var trimSilence: Bool = false
-    @Published var addSilencePadding: Bool = false
-    @Published var silencePaddingMilliseconds: Int = 0
-    @Published var convertToMono: Bool = false
-    @Published var preferredOutputSizeKB: Int = 1440  // default for floppy disk
-    
-    private init() {}
+class SettingsManager {
+    private let defaults = UserDefaults.standard
 
-    func resetToDefaults() {
-        selectedSampler = .s1000
-        normalizeAudio = false
-        trimSilence = false
-        addSilencePadding = false
-        silencePaddingMilliseconds = 0
-        convertToMono = false
-        preferredOutputSizeKB = 1440
+    func saveSettings(sampleRate: Int, bitDepth: Int, format: SampleFormat) {
+        defaults.set(sampleRate, forKey: "sampleRate")
+        defaults.set(bitDepth, forKey: "bitDepth")
+        defaults.set(format.rawValue, forKey: "outputFormat")
+    }
+
+    func loadSettings() -> (sampleRate: Int, bitDepth: Int, format: SampleFormat) {
+        let sampleRate = defaults.integer(forKey: "sampleRate")
+        let bitDepth = defaults.integer(forKey: "bitDepth")
+        let formatString = defaults.string(forKey: "outputFormat") ?? SampleFormat.pcm16.rawValue
+        let format = SampleFormat(rawValue: formatString) ?? .pcm16
+        return (sampleRate, bitDepth, format)
     }
 }
-

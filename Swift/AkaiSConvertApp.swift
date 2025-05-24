@@ -1,4 +1,3 @@
-//
 //  AkaiSConvertApp.swift
 //  AkaiSConvert
 //
@@ -9,9 +8,15 @@ import SwiftUI
 
 @main
 struct AkaiSConvertApp: App {
+    @StateObject private var viewModel = ConversionViewModel()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(viewModel: viewModel)
+                .environmentObject(viewModel)
+        }
+        .commands {
+            AppMenuCommands(viewModel: viewModel) 
         }
     }
 }

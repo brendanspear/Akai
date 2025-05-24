@@ -8,6 +8,7 @@
 #include "akaiutil_tar.h"
 #include <stdlib.h>
 #include <string.h>
+#include "akai_disk.h"
 
 int akai_build_disk_image(const disk_t *disk, uint8_t *buffer, size_t max_length) {
     if (!disk || !buffer || max_length == 0) {

@@ -54,13 +54,46 @@
 		C638B9822DD83F3C000E4B43 /* SampleProcessingTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C638B9812DD83F3C000E4B43 /* SampleProcessingTask.swift */; };
 		C638B9832DD83F3C000E4B43 /* AkaiSampleTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C638B9802DD83F3C000E4B43 /* AkaiSampleTask.swift */; };
 		C638B9852DD83FE1000E4B43 /* ExportPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = C638B9842DD83FE1000E4B43 /* ExportPreferences.swift */; };
-		C638B9922DD85562000E4B43 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C638B9912DD8555D000E4B43 /* ContentView.swift */; };
 		C638B9942DD857E8000E4B43 /* AkaiSConvertApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C638B9932DD857E6000E4B43 /* AkaiSConvertApp.swift */; };
 		C638B9962DD85DA4000E4B43 /* FileDropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C638B9952DD85DA4000E4B43 /* FileDropView.swift */; };
+		C638B9A12DDA1D91000E4B43 /* AkaiConversionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C638B9A02DDA1D91000E4B43 /* AkaiConversionManager.swift */; };
+		C638B9AD2DDA20F2000E4B43 /* SamplerType+Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C638B9AC2DDA20F0000E4B43 /* SamplerType+Properties.swift */; };
+		C638B9B12DDA8A8C000E4B43 /* WaveformLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C638B9B02DDA8A8C000E4B43 /* WaveformLoader.swift */; };
+		C638B9B32DDABE9D000E4B43 /* ConversionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C638B9B22DDABE9B000E4B43 /* ConversionViewModel.swift */; };
+		C638B9B52DDABF3E000E4B43 /* WaveformPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C638B9B42DDABF3C000E4B43 /* WaveformPreviewView.swift */; };
+		C638B9B72DDACE20000E4B43 /* ConversionSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C638B9B62DDACE20000E4B43 /* ConversionSettings.swift */; };
 		C63ED1E52DD087FF00A72418 /* libsndfile.1.0.37.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C63ED1BC2DD087AE00A72418 /* libsndfile.1.0.37.dylib */; };
+		C68253872DDB48DD0090CE04 /* DropZoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68253862DDB48DC0090CE04 /* DropZoneView.swift */; };
+		C682538B2DDC2CA00090CE04 /* WaveformRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C682538A2DDC2CA00090CE04 /* WaveformRenderer.swift */; };
+		C682539F2DDD7D740090CE04 /* SampleConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C682539E2DDD7D720090CE04 /* SampleConverter.swift */; };
+		C68253A12DDD7EF80090CE04 /* akaiutil_api.c in Sources */ = {isa = PBXBuildFile; fileRef = C68253A02DDD7EF30090CE04 /* akaiutil_api.c */; };
+		C68253A52DDD8A490090CE04 /* akai_export.c in Sources */ = {isa = PBXBuildFile; fileRef = C68253A42DDD8A430090CE04 /* akai_export.c */; };
 		C6C2169D2DD5A1F10021EABE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C6C2169C2DD5A1F10021EABE /* README.md */; };
 		C6C2169F2DD5A2F70021EABE /* NOTICE.me in Resources */ = {isa = PBXBuildFile; fileRef = C6C2169E2DD5A2EE0021EABE /* NOTICE.me */; };
 		C6C216A22DD5A3C10021EABE /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C6C216A12DD5A3C10021EABE /* LICENSE */; };
+		C6CB64822DDDF64900F1767C /* akai_disk.c in Sources */ = {isa = PBXBuildFile; fileRef = C6CB64812DDDF64400F1767C /* akai_disk.c */; };
+		C6CFE1B02DDFB199007FB979 /* SampleFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CFE1AF2DDFB199007FB979 /* SampleFormat.swift */; };
+		C6CFE1B22DDFB1B5007FB979 /* SamplerType+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CFE1B12DDFB1B5007FB979 /* SamplerType+Defaults.swift */; };
+		C6CFE1B42DDFC273007FB979 /* AkaiConversionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CFE1B32DDFC273007FB979 /* AkaiConversionManager.swift */; };
+		C6CFE1BC2DDFD05B007FB979 /* SamplerSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CFE1BB2DDFD05B007FB979 /* SamplerSettingsViewModel.swift */; };
+		C6CFE1C22DDFDA14007FB979 /* SamplerType+DisplayName.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CFE1C12DDFDA14007FB979 /* SamplerType+DisplayName.swift */; };
+		C6CFE1C42DE01FAF007FB979 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CFE1C32DE01FAF007FB979 /* ContentView.swift */; };
+		C6CFE1C62DE034CA007FB979 /* AppMenuCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CFE1C52DE034C8007FB979 /* AppMenuCommands.swift */; };
+		C6CFE1C82DE0A95A007FB979 /* AudioFileMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CFE1C72DE0A958007FB979 /* AudioFileMetadata.swift */; };
+		C6CFE1CA2DE16278007FB979 /* AudioPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CFE1C92DE1626F007FB979 /* AudioPlayerManager.swift */; };
+		C6E3C0A52DDF3AA40092F285 /* WavVisualizer..swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E3C0A42DDF3AA40092F285 /* WavVisualizer..swift */; };
+		C6E3C0A72DDF3AAE0092F285 /* FileConversionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E3C0A62DDF3AAE0092F285 /* FileConversionStatus.swift */; };
+		C6E3C0A92DDF3F4C0092F285 /* MPC60Support.md in Resources */ = {isa = PBXBuildFile; fileRef = C6E3C0A82DDF3F380092F285 /* MPC60Support.md */; };
+		C6E4931E2DDEC7A7008DFEF9 /* SafeAudioLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E4931D2DDEC7A7008DFEF9 /* SafeAudioLoader.swift */; };
+		C6E493202DDECEE4008DFEF9 /* AudioEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = C6E4931F2DDECEE4008DFEF9 /* AudioEngine.mm */; };
+		C6E493242DDECEFE008DFEF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E493232DDECEFE008DFEF9 /* ViewController.swift */; };
+		C6E493292DDED211008DFEF9 /* WavLoader.c in Sources */ = {isa = PBXBuildFile; fileRef = C6E493282DDED211008DFEF9 /* WavLoader.c */; };
+		C6E4932B2DDED42A008DFEF9 /* MemoryUtils.c in Sources */ = {isa = PBXBuildFile; fileRef = C6E4932A2DDED426008DFEF9 /* MemoryUtils.c */; };
+		C6E493302DDED78F008DFEF9 /* safe_alloc.c in Sources */ = {isa = PBXBuildFile; fileRef = C6E4932F2DDED78E008DFEF9 /* safe_alloc.c */; };
+		C6E493322DDEDC91008DFEF9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E493312DDEDC91008DFEF9 /* AudioToolbox.framework */; };
+		C6E493372DDEFD78008DFEF9 /* FileStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E493362DDEFD78008DFEF9 /* FileStatus.swift */; };
+		C6E493392DDEFD80008DFEF9 /* SampleMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E493382DDEFD80008DFEF9 /* SampleMetadata.swift */; };
+		C6E4933D2DDF09C1008DFEF9 /* AudioMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E4933C2DDF09BF008DFEF9 /* AudioMetadata.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,9 +177,14 @@
 		C638B9842DD83FE1000E4B43 /* ExportPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportPreferences.swift; sourceTree = "<group>"; };
 		C638B9862DD84671000E4B43 /* sample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sample.h; sourceTree = "<group>"; };
 		C638B9902DD84D3F000E4B43 /* akaiutil_constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = akaiutil_constants.h; sourceTree = "<group>"; };
-		C638B9912DD8555D000E4B43 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C638B9932DD857E6000E4B43 /* AkaiSConvertApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AkaiSConvertApp.swift; sourceTree = "<group>"; };
 		C638B9952DD85DA4000E4B43 /* FileDropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDropView.swift; sourceTree = "<group>"; };
+		C638B9A02DDA1D91000E4B43 /* AkaiConversionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AkaiConversionManager.swift; sourceTree = "<group>"; };
+		C638B9AC2DDA20F0000E4B43 /* SamplerType+Properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SamplerType+Properties.swift"; sourceTree = "<group>"; };
+		C638B9B02DDA8A8C000E4B43 /* WaveformLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformLoader.swift; sourceTree = "<group>"; };
+		C638B9B22DDABE9B000E4B43 /* ConversionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionViewModel.swift; sourceTree = "<group>"; };
+		C638B9B42DDABF3C000E4B43 /* WaveformPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformPreviewView.swift; sourceTree = "<group>"; };
+		C638B9B62DDACE20000E4B43 /* ConversionSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionSettings.swift; sourceTree = "<group>"; };
 		C63ED1A12DD087AE00A72418 /* libsndfile.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = libsndfile.rb; sourceTree = "<group>"; };
 		C63ED1A32DD087AE00A72418 /* sndfile-cmp */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "sndfile-cmp"; sourceTree = "<group>"; };
 		C63ED1A42DD087AE00A72418 /* sndfile-concat */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "sndfile-concat"; sourceTree = "<group>"; };
@@ -202,12 +240,49 @@
 		C63ED1E12DD087AE00A72418 /* INSTALL_RECEIPT.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = INSTALL_RECEIPT.json; sourceTree = "<group>"; };
 		C63ED1E22DD087AE00A72418 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		C63ED1E32DD087AE00A72418 /* sbom.spdx.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sbom.spdx.json; sourceTree = "<group>"; };
+		C68253862DDB48DC0090CE04 /* DropZoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropZoneView.swift; sourceTree = "<group>"; };
+		C682538A2DDC2CA00090CE04 /* WaveformRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformRenderer.swift; sourceTree = "<group>"; };
+		C682539E2DDD7D720090CE04 /* SampleConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleConverter.swift; sourceTree = "<group>"; };
+		C68253A02DDD7EF30090CE04 /* akaiutil_api.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = akaiutil_api.c; sourceTree = "<group>"; };
+		C68253A42DDD8A430090CE04 /* akai_export.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = akai_export.c; sourceTree = "<group>"; };
+		C68253A62DDD8A7F0090CE04 /* akai_export.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = akai_export.h; sourceTree = "<group>"; };
+		C68253A72DDD8E6A0090CE04 /* akai_model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = akai_model.h; sourceTree = "<group>"; };
 		C6C2169C2DD5A1F10021EABE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C6C2169E2DD5A2EE0021EABE /* NOTICE.me */ = {isa = PBXFileReference; lastKnownFileType = text; path = NOTICE.me; sourceTree = "<group>"; };
 		C6C216A12DD5A3C10021EABE /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		C6CB64812DDDF64400F1767C /* akai_disk.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = akai_disk.c; sourceTree = "<group>"; };
+		C6CB64832DDDF67400F1767C /* akai_disk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = akai_disk.h; sourceTree = "<group>"; };
+		C6CB64882DDE5CAB00F1767C /* akaiutil_api.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = akaiutil_api.h; sourceTree = "<group>"; };
 		C6CE0FB12DCDA7AD0028F722 /* AkaiSConvert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AkaiSConvert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6CE0FBF2DCDA7AF0028F722 /* AkaiSConvertTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AkaiSConvertTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6CE0FC92DCDA7AF0028F722 /* AkaiSConvertUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AkaiSConvertUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6CFE1AF2DDFB199007FB979 /* SampleFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleFormat.swift; sourceTree = "<group>"; };
+		C6CFE1B12DDFB1B5007FB979 /* SamplerType+Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SamplerType+Defaults.swift"; sourceTree = "<group>"; };
+		C6CFE1B32DDFC273007FB979 /* AkaiConversionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AkaiConversionManager.swift; sourceTree = "<group>"; };
+		C6CFE1BB2DDFD05B007FB979 /* SamplerSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplerSettingsViewModel.swift; sourceTree = "<group>"; };
+		C6CFE1C12DDFDA14007FB979 /* SamplerType+DisplayName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SamplerType+DisplayName.swift"; sourceTree = "<group>"; };
+		C6CFE1C32DE01FAF007FB979 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C6CFE1C52DE034C8007FB979 /* AppMenuCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMenuCommands.swift; sourceTree = "<group>"; };
+		C6CFE1C72DE0A958007FB979 /* AudioFileMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioFileMetadata.swift; sourceTree = "<group>"; };
+		C6CFE1C92DE1626F007FB979 /* AudioPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerManager.swift; sourceTree = "<group>"; };
+		C6E3C0A42DDF3AA40092F285 /* WavVisualizer..swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavVisualizer..swift; sourceTree = "<group>"; };
+		C6E3C0A62DDF3AAE0092F285 /* FileConversionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileConversionStatus.swift; sourceTree = "<group>"; };
+		C6E3C0A82DDF3F380092F285 /* MPC60Support.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MPC60Support.md; sourceTree = "<group>"; };
+		C6E4931D2DDEC7A7008DFEF9 /* SafeAudioLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAudioLoader.swift; sourceTree = "<group>"; };
+		C6E4931F2DDECEE4008DFEF9 /* AudioEngine.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AudioEngine.mm; sourceTree = "<group>"; };
+		C6E493232DDECEFE008DFEF9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C6E493262DDED0FD008DFEF9 /* AudioEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioEngine.h; sourceTree = "<group>"; };
+		C6E493272DDED208008DFEF9 /* read_utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = read_utils.h; sourceTree = "<group>"; };
+		C6E493282DDED211008DFEF9 /* WavLoader.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = WavLoader.c; sourceTree = "<group>"; };
+		C6E4932A2DDED426008DFEF9 /* MemoryUtils.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = MemoryUtils.c; sourceTree = "<group>"; };
+		C6E4932C2DDED45C008DFEF9 /* MemoryUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoryUtils.h; sourceTree = "<group>"; };
+		C6E4932D2DDED712008DFEF9 /* WavLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WavLoader.h; sourceTree = "<group>"; };
+		C6E4932E2DDED76D008DFEF9 /* safe_alloc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = safe_alloc.h; sourceTree = "<group>"; };
+		C6E4932F2DDED78E008DFEF9 /* safe_alloc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = safe_alloc.c; sourceTree = "<group>"; };
+		C6E493312DDEDC91008DFEF9 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		C6E493362DDEFD78008DFEF9 /* FileStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStatus.swift; sourceTree = "<group>"; };
+		C6E493382DDEFD80008DFEF9 /* SampleMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleMetadata.swift; sourceTree = "<group>"; };
+		C6E4933C2DDF09BF008DFEF9 /* AudioMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMetadata.swift; sourceTree = "<group>"; };
 		C6E553C42DD1AE5000403630 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -234,6 +309,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6E493322DDEDC91008DFEF9 /* AudioToolbox.framework in Frameworks */,
 				C63ED1E52DD087FF00A72418 /* libsndfile.1.0.37.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,6 +334,22 @@
 		C6206FC12DD7C075002C1C9C /* C */ = {
 			isa = PBXGroup;
 			children = (
+				C6E4932F2DDED78E008DFEF9 /* safe_alloc.c */,
+				C6E4932E2DDED76D008DFEF9 /* safe_alloc.h */,
+				C6E4932D2DDED712008DFEF9 /* WavLoader.h */,
+				C6E4932C2DDED45C008DFEF9 /* MemoryUtils.h */,
+				C6E4932A2DDED426008DFEF9 /* MemoryUtils.c */,
+				C6E493282DDED211008DFEF9 /* WavLoader.c */,
+				C6E493272DDED208008DFEF9 /* read_utils.h */,
+				C6E493262DDED0FD008DFEF9 /* AudioEngine.h */,
+				C6E4931F2DDECEE4008DFEF9 /* AudioEngine.mm */,
+				C6CB64882DDE5CAB00F1767C /* akaiutil_api.h */,
+				C6CB64812DDDF64400F1767C /* akai_disk.c */,
+				C6CB64832DDDF67400F1767C /* akai_disk.h */,
+				C68253A72DDD8E6A0090CE04 /* akai_model.h */,
+				C68253A42DDD8A430090CE04 /* akai_export.c */,
+				C68253A62DDD8A7F0090CE04 /* akai_export.h */,
+				C68253A02DDD7EF30090CE04 /* akaiutil_api.c */,
 				C638B9902DD84D3F000E4B43 /* akaiutil_constants.h */,
 				C638B9862DD84671000E4B43 /* sample.h */,
 				C6206FA92DD7C075002C1C9C /* akai_constants.h */,
@@ -291,17 +383,36 @@
 		C62070342DD7C0E9002C1C9C /* Swift */ = {
 			isa = PBXGroup;
 			children = (
-				C638B9952DD85DA4000E4B43 /* FileDropView.swift */,
-				C638B9932DD857E6000E4B43 /* AkaiSConvertApp.swift */,
-				C638B9912DD8555D000E4B43 /* ContentView.swift */,
-				C638B9842DD83FE1000E4B43 /* ExportPreferences.swift */,
+				C6CFE1B32DDFC273007FB979 /* AkaiConversionManager.swift */,
+				C638B9A02DDA1D91000E4B43 /* AkaiConversionManager.swift */,
 				C638B9802DD83F3C000E4B43 /* AkaiSampleTask.swift */,
+				C638B9932DD857E6000E4B43 /* AkaiSConvertApp.swift */,
+				C6CFE1C52DE034C8007FB979 /* AppMenuCommands.swift */,
+				C6CFE1C72DE0A958007FB979 /* AudioFileMetadata.swift */,
+				C6E4933C2DDF09BF008DFEF9 /* AudioMetadata.swift */,
+				C6CFE1C92DE1626F007FB979 /* AudioPlayerManager.swift */,
+				C6CFE1C32DE01FAF007FB979 /* ContentView.swift */,
+				C638B9B62DDACE20000E4B43 /* ConversionSettings.swift */,
+				C638B9B22DDABE9B000E4B43 /* ConversionViewModel.swift */,
+				C68253862DDB48DC0090CE04 /* DropZoneView.swift */,
+				C638B9842DD83FE1000E4B43 /* ExportPreferences.swift */,
+				C6E3C0A62DDF3AAE0092F285 /* FileConversionStatus.swift */,
+				C638B9952DD85DA4000E4B43 /* FileDropView.swift */,
+				C6E493362DDEFD78008DFEF9 /* FileStatus.swift */,
+				C6E4931D2DDEC7A7008DFEF9 /* SafeAudioLoader.swift */,
+				C682539E2DDD7D720090CE04 /* SampleConverter.swift */,
+				C6CFE1AF2DDFB199007FB979 /* SampleFormat.swift */,
+				C6E493382DDEFD80008DFEF9 /* SampleMetadata.swift */,
 				C638B9812DD83F3C000E4B43 /* SampleProcessingTask.swift */,
 				C62070122DD7C0E9002C1C9C /* SamplerSettings.swift */,
 				C62070132DD7C0E9002C1C9C /* SamplerSettingsView.swift */,
+				C6CFE1BB2DDFD05B007FB979 /* SamplerSettingsViewModel.swift */,
 				C62070142DD7C0E9002C1C9C /* SamplerSettingsViewModel.swift */,
 				C62070152DD7C0E9002C1C9C /* SamplerTarget.swift */,
 				C62070162DD7C0E9002C1C9C /* SamplerType.swift */,
+				C6CFE1B12DDFB1B5007FB979 /* SamplerType+Defaults.swift */,
+				C6CFE1C12DDFDA14007FB979 /* SamplerType+DisplayName.swift */,
+				C638B9AC2DDA20F0000E4B43 /* SamplerType+Properties.swift */,
 				C62070172DD7C0E9002C1C9C /* SamplerWarningView.swift */,
 				C62070182DD7C0E9002C1C9C /* SampleTaskQueue.swift */,
 				C62070192DD7C0E9002C1C9C /* SamplingSettings.swift */,
@@ -321,14 +432,19 @@
 				C62070272DD7C0E9002C1C9C /* TrimUtility.swift */,
 				C62070282DD7C0E9002C1C9C /* UserPreferences.swift */,
 				C62070292DD7C0E9002C1C9C /* View+Extensions.swift */,
+				C6E493232DDECEFE008DFEF9 /* ViewController.swift */,
 				C620702A2DD7C0E9002C1C9C /* VolumeNormalizationView.swift */,
 				C620702B2DD7C0E9002C1C9C /* WaveformAnalyzer.swift */,
+				C638B9B02DDA8A8C000E4B43 /* WaveformLoader.swift */,
 				C620702C2DD7C0E9002C1C9C /* WaveformPreview.swift */,
+				C638B9B42DDABF3C000E4B43 /* WaveformPreviewView.swift */,
+				C682538A2DDC2CA00090CE04 /* WaveformRenderer.swift */,
 				C620702D2DD7C0E9002C1C9C /* WaveformUtils.swift */,
 				C620702E2DD7C0E9002C1C9C /* WaveformView.swift */,
 				C620702F2DD7C0E9002C1C9C /* WAVHeader.swift */,
 				C62070302DD7C0E9002C1C9C /* WavPlayer.swift */,
 				C62070312DD7C0E9002C1C9C /* WavPreviewPlayer.swift */,
+				C6E3C0A42DDF3AA40092F285 /* WavVisualizer..swift */,
 				C62070322DD7C0E9002C1C9C /* WavVisualizer..swift */,
 				C62070332DD7C0E9002C1C9C /* WavWriter.swift */,
 			);
@@ -338,6 +454,7 @@
 		C63ED1A02DD087AE00A72418 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C6E493312DDEDC91008DFEF9 /* AudioToolbox.framework */,
 				C63ED1E42DD087AE00A72418 /* 1.2.2_1 */,
 			);
 			name = Frameworks;
@@ -505,6 +622,7 @@
 		C6CE0FA82DCDA7AD0028F722 = {
 			isa = PBXGroup;
 			children = (
+				C6E3C0A82DDF3F380092F285 /* MPC60Support.md */,
 				C6C216A12DD5A3C10021EABE /* LICENSE */,
 				C6C2169C2DD5A1F10021EABE /* README.md */,
 				C6C2169E2DD5A2EE0021EABE /* NOTICE.me */,
@@ -651,6 +769,7 @@
 			files = (
 				C6C2169D2DD5A1F10021EABE /* README.md in Resources */,
 				C6C216A22DD5A3C10021EABE /* LICENSE in Resources */,
+				C6E3C0A92DDF3F4C0092F285 /* MPC60Support.md in Resources */,
 				C6C2169F2DD5A2F70021EABE /* NOTICE.me in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -676,36 +795,52 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6CFE1C42DE01FAF007FB979 /* ContentView.swift in Sources */,
 				C6206FC22DD7C075002C1C9C /* akaiutil_take.c in Sources */,
 				C6206FC42DD7C075002C1C9C /* akaiutil_trim.c in Sources */,
 				C6206FC52DD7C075002C1C9C /* commonlib.c in Sources */,
 				C6206FC62DD7C075002C1C9C /* akaiutil_io.c in Sources */,
+				C6E493372DDEFD78008DFEF9 /* FileStatus.swift in Sources */,
 				C6206FC72DD7C075002C1C9C /* akaiutil_wav.c in Sources */,
 				C638B9962DD85DA4000E4B43 /* FileDropView.swift in Sources */,
 				C638B9852DD83FE1000E4B43 /* ExportPreferences.swift in Sources */,
 				C6206FC82DD7C075002C1C9C /* akaiutil_check.c in Sources */,
+				C638B9A12DDA1D91000E4B43 /* AkaiConversionManager.swift in Sources */,
+				C6CFE1BC2DDFD05B007FB979 /* SamplerSettingsViewModel.swift in Sources */,
+				C6CFE1B22DDFB1B5007FB979 /* SamplerType+Defaults.swift in Sources */,
 				C6206FC92DD7C075002C1C9C /* akaiutil_tar.c in Sources */,
-				C638B9922DD85562000E4B43 /* ContentView.swift in Sources */,
+				C6E4932B2DDED42A008DFEF9 /* MemoryUtils.c in Sources */,
+				C6CB64822DDDF64900F1767C /* akai_disk.c in Sources */,
 				C6206FCA2DD7C075002C1C9C /* akaiutil_audioutils.c in Sources */,
 				C6206FCB2DD7C075002C1C9C /* akaiutil_file.c in Sources */,
+				C682539F2DDD7D740090CE04 /* SampleConverter.swift in Sources */,
 				C6206FCC2DD7C075002C1C9C /* akaiutil.c in Sources */,
+				C682538B2DDC2CA00090CE04 /* WaveformRenderer.swift in Sources */,
 				C62070352DD7C0E9002C1C9C /* SilenceSettingsView.swift in Sources */,
 				C62070362DD7C0E9002C1C9C /* SoundPreviewPlayer.swift in Sources */,
+				C68253872DDB48DD0090CE04 /* DropZoneView.swift in Sources */,
 				C62070372DD7C0E9002C1C9C /* SamplerSettingsView.swift in Sources */,
+				C6E4931E2DDEC7A7008DFEF9 /* SafeAudioLoader.swift in Sources */,
 				C62070382DD7C0E9002C1C9C /* StatusOverlayView.swift in Sources */,
+				C6CFE1C22DDFDA14007FB979 /* SamplerType+DisplayName.swift in Sources */,
 				C62070392DD7C0E9002C1C9C /* SamplerTarget.swift in Sources */,
 				C620703A2DD7C0E9002C1C9C /* SamplerType.swift in Sources */,
 				C620703B2DD7C0E9002C1C9C /* WavPlayer.swift in Sources */,
 				C620703C2DD7C0E9002C1C9C /* View+Extensions.swift in Sources */,
 				C620703D2DD7C0E9002C1C9C /* SampleTaskQueue.swift in Sources */,
+				C6E493242DDECEFE008DFEF9 /* ViewController.swift in Sources */,
+				C6E3C0A52DDF3AA40092F285 /* WavVisualizer..swift in Sources */,
 				C620703E2DD7C0E9002C1C9C /* TrimOptions.swift in Sources */,
+				C6E3C0A72DDF3AAE0092F285 /* FileConversionStatus.swift in Sources */,
 				C638B9822DD83F3C000E4B43 /* SampleProcessingTask.swift in Sources */,
 				C638B9832DD83F3C000E4B43 /* AkaiSampleTask.swift in Sources */,
 				C620703F2DD7C0E9002C1C9C /* ToggleOption.swift in Sources */,
 				C62070402DD7C0E9002C1C9C /* WaveformPreview.swift in Sources */,
 				C62070412DD7C0E9002C1C9C /* SilencePaddingView.swift in Sources */,
 				C62070422DD7C0E9002C1C9C /* WavPreviewPlayer.swift in Sources */,
+				C6CFE1CA2DE16278007FB979 /* AudioPlayerManager.swift in Sources */,
 				C62070432DD7C0E9002C1C9C /* VolumeNormalizationView.swift in Sources */,
+				C6E493292DDED211008DFEF9 /* WavLoader.c in Sources */,
 				C62070442DD7C0E9002C1C9C /* WAVHeader.swift in Sources */,
 				C62070452DD7C0E9002C1C9C /* WavVisualizer..swift in Sources */,
 				C62070462DD7C0E9002C1C9C /* WaveformUtils.swift in Sources */,
@@ -713,16 +848,31 @@
 				C62070482DD7C0E9002C1C9C /* SilenceUtils.swift in Sources */,
 				C638B9942DD857E8000E4B43 /* AkaiSConvertApp.swift in Sources */,
 				C62070492DD7C0E9002C1C9C /* WaveformView.swift in Sources */,
+				C68253A12DDD7EF80090CE04 /* akaiutil_api.c in Sources */,
+				C6CFE1C82DE0A95A007FB979 /* AudioFileMetadata.swift in Sources */,
+				C638B9B52DDABF3E000E4B43 /* WaveformPreviewView.swift in Sources */,
 				C620704A2DD7C0E9002C1C9C /* SamplerWarningView.swift in Sources */,
 				C620704B2DD7C0E9002C1C9C /* WaveformAnalyzer.swift in Sources */,
+				C6E493392DDEFD80008DFEF9 /* SampleMetadata.swift in Sources */,
+				C6E4933D2DDF09C1008DFEF9 /* AudioMetadata.swift in Sources */,
+				C638B9B72DDACE20000E4B43 /* ConversionSettings.swift in Sources */,
+				C6CFE1B02DDFB199007FB979 /* SampleFormat.swift in Sources */,
+				C6CFE1B42DDFC273007FB979 /* AkaiConversionManager.swift in Sources */,
 				C620704C2DD7C0E9002C1C9C /* TrimOptionsView.swift in Sources */,
 				C620704D2DD7C0E9002C1C9C /* SettingsManager.swift in Sources */,
+				C6CFE1C62DE034CA007FB979 /* AppMenuCommands.swift in Sources */,
 				C620704E2DD7C0E9002C1C9C /* SamplingSettings.swift in Sources */,
+				C638B9B12DDA8A8C000E4B43 /* WaveformLoader.swift in Sources */,
 				C620704F2DD7C0E9002C1C9C /* StatusIndicatorView.swift in Sources */,
+				C6E493302DDED78F008DFEF9 /* safe_alloc.c in Sources */,
+				C68253A52DDD8A490090CE04 /* akai_export.c in Sources */,
 				C62070502DD7C0E9002C1C9C /* SilenceTrimmer.swift in Sources */,
 				C62070512DD7C0E9002C1C9C /* TaskRunner.swift in Sources */,
+				C638B9B32DDABE9D000E4B43 /* ConversionViewModel.swift in Sources */,
 				C62070522DD7C0E9002C1C9C /* SamplerSettingsViewModel.swift in Sources */,
 				C62070532DD7C0E9002C1C9C /* TrimUtility.swift in Sources */,
+				C638B9AD2DDA20F2000E4B43 /* SamplerType+Properties.swift in Sources */,
+				C6E493202DDECEE4008DFEF9 /* AudioEngine.mm in Sources */,
 				C62070542DD7C0E9002C1C9C /* SystemVolumeManager.swift in Sources */,
 				C62070552DD7C0E9002C1C9C /* SamplerSettings.swift in Sources */,
 				C62070562DD7C0E9002C1C9C /* UserPreferences.swift in Sources */,

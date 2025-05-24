@@ -2,49 +2,16 @@
 //  SamplerType.swift
 //  AkaiSConvert
 //
-//  Created by Brendan Spear on 2025-05-XX.
+//  Created by Brendan Spear on 2024-05-21.
 //
 
 import Foundation
 
-enum SamplerType: String, Codable, CaseIterable {
-    case s900
-    case s1000
-    case s3000
+enum SamplerType: String, CaseIterable, Identifiable, Codable {
+    case s900 = "S900"
+    case s950 = "S950"
+    case s1000 = "S1000/S1100"
+    case s3000 = "S3000/S3200"
 
-    struct Defaults {
-        static func defaultSampleRate(for sampler: SamplerType) -> UInt32 {
-            switch sampler {
-            case .s900: return 4000
-            case .s1000: return 44100
-            case .s3000: return 44100
-            }
-        }
-
-        static func defaultBitDepth(for sampler: SamplerType) -> UInt8 {
-            switch sampler {
-            case .s900: return 12
-            case .s1000, .s3000: return 16
-            }
-        }
-
-        static func isMonoOnly(for sampler: SamplerType) -> Bool {
-            return sampler == .s900
-        }
-
-        static func maxSampleRate(for sampler: SamplerType) -> UInt32 {
-            switch sampler {
-            case .s900: return 4000
-            case .s1000: return 44100
-            case .s3000: return 48000
-            }
-        }
-
-        static func supportedBitDepths(for sampler: SamplerType) -> [UInt8] {
-            switch sampler {
-            case .s900: return [12]
-            case .s1000, .s3000: return [16]
-            }
-        }
-    }
+    var id: String { rawValue }
 }

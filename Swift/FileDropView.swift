@@ -1,31 +1,26 @@
+// FileDropView.swift
+// AkaiSConvert
 //
-//  FileDropView.swift
-//  AkaiSConvert
-//
-//  Created by Brendan Spear on 5/17/25.
-//
+// Created by Brendan Spear on 2025-05-18.
 
 import SwiftUI
+import UniformTypeIdentifiers
 
 struct FileDropView: View {
-    @Binding var fileURL: URL?
+    var onDrop: ([URL]) -> Void
 
     var body: some View {
-        VStack {
-            Text(fileURL == nil ? "Drop a file here or click to select" : fileURL!.lastPathComponent)
-                .padding()
-                .frame(maxWidth: .infinity, minHeight: 100)
-                .background(Color.gray.opacity(0.2))
-                .cornerRadius(10)
-                .onTapGesture {
-                    let panel = NSOpenPanel()
-                    panel.canChooseFiles = true
-                    panel.allowsMultipleSelection = false
-                    panel.canChooseDirectories = false
-                    if panel.runModal() == .OK {
-                        fileURL = panel.url
+        Rectangle()
+            .fill(Color.clear)
+            .onDrop(of: [UTType.fileURL], isTargeted: nil) { providers in
+                providers.first?.loadItem(forTypeIdentifier: UTType.fileURL.identifier, options: nil) { (item, error) in
+                    if let data = item as? Data, let url = URL(dataRepresentation: data, relativeTo: nil) {
+                        DispatchQueue.main.async {
+                            onDrop([url])
+                        }
                     }
                 }
-        }
+                return true
+            }
     }
 }
