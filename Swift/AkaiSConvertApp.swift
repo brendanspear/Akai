@@ -1,7 +1,8 @@
+//
 //  AkaiSConvertApp.swift
 //  AkaiSConvert
 //
-//  Created by Brendan Spear on 2025-05-15.
+//  Created by Brendan Spear on 2025-05-24.
 //
 
 import SwiftUI
@@ -13,10 +14,9 @@ struct AkaiSConvertApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView(viewModel: viewModel)
-                .environmentObject(viewModel)
         }
         .commands {
-            AppMenuCommands(viewModel: viewModel) 
+            AppMenuCommands(viewModel: viewModel)
         }
     }
 }

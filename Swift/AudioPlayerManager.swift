@@ -2,47 +2,39 @@
 //  AudioPlayerManager.swift
 //  AkaiSConvert
 //
-//  Created by Brendan Spear on 2025-05-23.
+//  Created by Brendan Spear on 2025-05-24.
 //
 
 import Foundation
 import AVFoundation
 
+@MainActor
 class AudioPlayerManager: ObservableObject {
-    private var audioPlayer: AVAudioPlayer?
-    private var currentURL: URL?
+    private var players: [URL: AVAudioPlayer] = [:]
 
     func togglePlayback(for url: URL) async {
-        if currentURL == url, let player = audioPlayer, player.isPlaying {
+        if let player = players[url], player.isPlaying {
             player.stop()
-            audioPlayer = nil
-            currentURL = nil
         } else {
             await play(url: url)
         }
     }
 
-    private func play(url: URL) async {
+    func play(url: URL) async {
         do {
             let player = try AVAudioPlayer(contentsOf: url)
-            DispatchQueue.main.async {
-                self.audioPlayer = player
-                self.currentURL = url
-                self.audioPlayer?.play()
-            }
+            player.prepareToPlay()
+            player.play()
+            players[url] = player
         } catch {
-            print("Playback failed: \(error.localizedDescription)")
+            print("❌ Failed to play \(url.lastPathComponent): \(error)")
         }
     }
 
-    /// Stops playback if the given URL is currently playing
     func stopPlayback(for url: URL) async {
-        DispatchQueue.main.async {
-            if self.currentURL == url {
-                self.audioPlayer?.stop()
-                self.audioPlayer = nil
-                self.currentURL = nil
-            }
+        if let player = players[url] {
+            player.stop()
+            players.removeValue(forKey: url)
         }
     }
 }

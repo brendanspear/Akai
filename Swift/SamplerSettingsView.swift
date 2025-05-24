@@ -36,7 +36,7 @@ struct SamplerSettingsView: View {
                         .frame(width: 60)
                 }
 
-                Toggle(isOn: $viewModel.settings.normalizeVolume) {
+                Toggle(isOn: $viewModel.settings.normalize) {
                     Text("Normalize Volume")
                 }
                 .toggleStyle(SwitchToggleStyle())

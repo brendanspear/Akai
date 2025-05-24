@@ -2,76 +2,106 @@
 //  WavWriter.swift
 //  AkaiSConvert
 //
-//  Created by Brendan Spear on 5/11/25.
+//  Created by Brendan Spear on 2025-05-24.
 //
 
 import Foundation
+import AVFoundation
 
-class WavWriter {
+struct WavWriter {
+    static func writePCM16WAV(inputURL: URL, outputURL: URL) -> Bool {
+        let asset = AVAsset(url: inputURL)
 
-    /// Writes a PCM16 WAV file to disk with a proper WAV header.
-    /// - Parameters:
-    ///   - samples: Audio samples in 16-bit PCM format.
-    ///   - sampleRate: Sample rate (e.g. 44100 Hz).
-    ///   - bitDepth: Bit depth (should be 16).
-    ///   - channels: Number of audio channels (1 for mono, 2 for stereo).
-    ///   - outputURL: Destination file path.
-    /// - Returns: `true` if write succeeds, `false` otherwise.
-    static func writeWav(samples: [Int16],
-                         sampleRate: UInt32,
-                         bitDepth: UInt16,
-                         channels: UInt16,
-                         to outputURL: URL) -> Bool {
-
-        guard bitDepth == 16 else {
-            print("Unsupported bit depth: \(bitDepth)")
+        guard let track = asset.tracks(withMediaType: .audio).first else {
+            print("❌ No audio track found in \(inputURL.lastPathComponent)")
             return false
         }
 
-        let byteRate = sampleRate * UInt32(channels) * UInt32(bitDepth / 8)
-        let blockAlign = UInt16(channels * (bitDepth / 8))
-        let dataSize = UInt32(samples.count * MemoryLayout<Int16>.size)
-        let chunkSize = 36 + dataSize
-
-        var wavData = Data()
-
-        // RIFF Header
-        wavData.append(contentsOf: "RIFF".utf8)
-        wavData.append(UInt32(chunkSize).littleEndianData)
-        wavData.append(contentsOf: "WAVE".utf8)
-
-        // fmt subchunk
-        wavData.append(contentsOf: "fmt ".utf8)
-        wavData.append(UInt32(16).littleEndianData)                  // Subchunk1Size
-        wavData.append(UInt16(1).littleEndianData)                   // AudioFormat (1 = PCM)
-        wavData.append(UInt16(channels).littleEndianData)           // NumChannels
-        wavData.append(UInt32(sampleRate).littleEndianData)         // SampleRate
-        wavData.append(UInt32(byteRate).littleEndianData)           // ByteRate
-        wavData.append(UInt16(blockAlign).littleEndianData)         // BlockAlign
-        wavData.append(UInt16(bitDepth).littleEndianData)           // BitsPerSample
-
-        // data subchunk
-        wavData.append(contentsOf: "data".utf8)
-        wavData.append(UInt32(dataSize).littleEndianData)
-
-        // Append sample data
-        let sampleData = samples.withUnsafeBufferPointer {
-            Data(buffer: $0)
-        }
-        wavData.append(sampleData)
+        let readerSettings: [String: Any] = [
+            AVFormatIDKey: kAudioFormatLinearPCM,
+            AVLinearPCMIsBigEndianKey: false,
+            AVLinearPCMIsFloatKey: false,
+            AVLinearPCMBitDepthKey: 16,
+            AVLinearPCMIsNonInterleaved: false
+        ]
 
         do {
-            try wavData.write(to: outputURL)
-            return true
+            let reader = try AVAssetReader(asset: asset)
+            let output = AVAssetReaderTrackOutput(track: track, outputSettings: readerSettings)
+
+            guard reader.canAdd(output) else {
+                print("❌ Cannot add track output to reader")
+                return false
+            }
+
+            reader.add(output)
+
+            let audioFormat = AVAudioFormat(
+                commonFormat: .pcmFormatInt16,
+                sampleRate: 44100,
+                channels: 1,
+                interleaved: true
+            )
+
+            guard let format = audioFormat else {
+                print("❌ Failed to create AVAudioFormat")
+                return false
+            }
+
+            let writer = try AVAudioFile(forWriting: outputURL, settings: format.settings)
+
+            reader.startReading()
+            while reader.status == .reading {
+                if let sampleBuffer = output.copyNextSampleBuffer(),
+                   let blockBuffer = CMSampleBufferGetDataBuffer(sampleBuffer) {
+
+                    var length = 0
+                    var dataPointer: UnsafeMutablePointer<Int8>?
+
+                    let status = CMBlockBufferGetDataPointer(
+                        blockBuffer,
+                        atOffset: 0,
+                        lengthAtOffsetOut: nil,
+                        totalLengthOut: &length,
+                        dataPointerOut: &dataPointer
+                    )
+
+                    if status == kCMBlockBufferNoErr, let pointer = dataPointer {
+                        let frameLength = length / Int(format.streamDescription.pointee.mBytesPerFrame)
+                        guard let pcmBuffer = AVAudioPCMBuffer(pcmFormat: format, frameCapacity: AVAudioFrameCount(frameLength)) else {
+                            CMSampleBufferInvalidate(sampleBuffer)
+                            continue
+                        }
+
+                        pcmBuffer.frameLength = AVAudioFrameCount(frameLength)
+
+                        if pcmBuffer.frameLength > 0,
+                           let channelData = pcmBuffer.int16ChannelData?.pointee {
+                            memcpy(channelData, pointer, length)
+                            do {
+                                try writer.write(from: pcmBuffer)
+                            } catch {
+                                print("❌ Failed writing buffer to file: \(error)")
+                            }
+                        } else {
+                            print("⚠️ Skipped writing empty or invalid buffer. Frame length: \(pcmBuffer.frameLength), length: \(length)")
+                        }
+                    }
+
+                    CMSampleBufferInvalidate(sampleBuffer)
+                }
+            }
+
+            if reader.status == .completed {
+                print("✅ WAV export completed: \(outputURL.lastPathComponent)")
+                return true
+            } else {
+                print("❌ WAV export failed: \(reader.status)")
+                return false
+            }
         } catch {
-            print("Failed to write WAV file: \(error)")
+            print("❌ WAV export error: \(error)")
             return false
         }
-    }
-}
-
-private extension FixedWidthInteger {
-    var littleEndianData: Data {
-        withUnsafeBytes(of: self.littleEndian) { Data($0) }
     }
 }

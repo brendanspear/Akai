@@ -6,5 +6,6 @@
 #include "akai_model.h"
 #include "akai_export.h"
 #include "akaiutil_api.h"
+#include "akai_bridge.h"
 
 #endif

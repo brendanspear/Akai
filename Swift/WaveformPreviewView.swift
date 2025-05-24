@@ -1,16 +1,17 @@
+
 //
 //  WaveformPreviewView.swift
 //  AkaiSConvert
 //
-//  Created by Brendan Spear on 2025-05-23.
+//  Created by Brendan Spear on 2025-05-24.
 //
 
 import SwiftUI
 
 struct WaveformPreviewView: View {
     var files: [URL]
-    var statuses: [URL: FileStatus]
-    var metadata: [URL: SampleMetadata]
+    var statuses: [URL: FileConversionStatus]
+    var metadata: [URL: AudioMetadata]
     var removeAction: (URL) -> Void
 
     @StateObject private var audioPlayerManager = AudioPlayerManager()
@@ -35,8 +36,8 @@ struct WaveformPreviewView: View {
 
 struct WaveformPreviewRowView: View {
     var url: URL
-    var status: FileStatus?
-    var info: SampleMetadata?
+    var status: FileConversionStatus?
+    var info: AudioMetadata?
     var removeAction: (URL) -> Void
 
     @EnvironmentObject var audioPlayerManager: AudioPlayerManager
@@ -84,38 +85,25 @@ struct WaveformPreviewRowView: View {
 
                     if isHovering {
                         Button(action: {
-                            Task {
-                                await audioPlayerManager.stopPlayback(for: url)
-                                removeAction(url)
-                            }
+                            removeAction(url)
                         }) {
                             Image(systemName: "xmark.circle.fill")
                                 .foregroundColor(.red)
-                                .padding(6)
-                                .transition(.opacity)
-                                .opacity(isHovering ? 1 : 0)
+                                .padding(4)
                         }
-                        .buttonStyle(PlainButtonStyle())
-                        .padding([.top, .trailing], 4)
-                        .zIndex(10)
+                        .buttonStyle(BorderlessButtonStyle())
+                        .transition(.opacity)
                     }
                 }
+                .background(Color(NSColor.controlBackgroundColor))
+                .cornerRadius(6)
             }
-            .padding(.vertical, 4)
             .padding(.horizontal, 8)
-            .background(Color(NSColor.controlBackgroundColor))
-            .cornerRadius(6)
-            .onTapGesture {
-                Task {
-                    await audioPlayerManager.togglePlayback(for: url)
-                }
-            }
-            .onHover { hovering in
-                withAnimation(.easeInOut(duration: 0.2)) {
-                    isHovering = hovering
-                }
+        }
+        .onHover { hovering in
+            withAnimation(.easeInOut(duration: 0.2)) {
+                isHovering = hovering
             }
         }
-        .frame(maxWidth: .infinity)
     }
 }

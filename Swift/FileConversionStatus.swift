@@ -5,9 +5,9 @@
 
 import Foundation
 
-enum FileConversionStatus: String, Codable {
-    case pending
-    case processing
-    case completed
+enum FileConversionStatus {
+    case queued
+    case converting
+    case success
     case failed
 }
